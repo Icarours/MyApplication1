@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.syl.myapplication1.activity.StudentActivity">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:ems="10"
+        android:hint="请输入姓名" android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp" android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name">
+        <RadioButton
+            android:id="@+id/rb_male"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
+            android:checked="true" android:text="男"
+            tools:layout_editor_absoluteX="128dp" tools:layout_editor_absoluteY="88dp"/>
+        <RadioButton
+            android:id="@+id/rb_female"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_weight="1" android:text="女"
+            tools:layout_editor_absoluteX="150dp" tools:layout_editor_absoluteY="75dp"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="保存"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <Button
+        android:id="@+id/btn_query"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询"
+        app:layout_constraintStart_toEndOf="@+id/btn_save"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <Button
+        android:id="@+id/btn_add_more"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" android:layout_marginTop="8dp"
+        android:text="插入多个数据"
+        app:layout_constraintStart_toEndOf="@+id/btn_query"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <Button
+        android:id="@+id/btn_query_all"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="查询所有"
+        app:layout_constraintStart_toEndOf="@+id/btn_add_more"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="result"
+        android:textSize="20sp" app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_query"/>
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:divider="@color/colorPrimary"
+        android:layout_height="302dp"
+        android:dividerHeight="2dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorMy1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+</android.support.constraint.ConstraintLayout>

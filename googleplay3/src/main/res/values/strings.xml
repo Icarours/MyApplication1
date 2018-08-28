@@ -1,0 +1,104 @@
+<resources>
+    <string name="app_name">GooGlePlay3</string>
+
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="detail_downloadnum">下载量:%1$s</string>
+    <string name="detail_size">程序大小:%1$s</string>
+    <string name="detail_date">更新时间:%1$s</string>
+    <string name="detail_version">版本:%1$s</string>
+    <!-- menu-->
+    <string name="app_detail_info_downloadnum">下载: %1$s</string>
+    <string name="app_detail_info_version">版本: %1$s</string>
+    <string name="app_detail_info_time">时间: %1$s</string>
+    <string name="app_detail_info_size">大小: %1$s</string>
+    <string name="tv_home">首页</string>
+    <string name="tv_setting">设置</string>
+    <string name="tv_theme">主题</string>
+    <string name="tv_scans">安装包管理</string>
+    <string name="tv_feedback">反馈</string>
+    <string name="tv_updates">检查更新</string>
+    <string name="tv_about">关于</string>
+    <string name="tv_exit">退出</string>
+    <string name="tv_user_name">未知</string>
+    <string name="tv_user_email">unknown@gmail.com</string>
+
+    <!--PermissionUtils 引用别人的代码-->
+    <string name="ok">ok</string>
+    <string name="cancel">cancel</string>
+    <string name="contacts_string">Total number of contacts: %1$,d\nFirst contact:
+        <b>%2$s</b>
+    </string>
+    <string name="contacts_none">No contacts stored on device.</string>
+    <string name="contacts_empty">Contacts not loaded.</string>
+    <string name="add_contact">Add a contact</string>
+    <string name="show_contact">Show first contact</string>
+    <string name="contacts_intro">This fragment demonstrates access to the contact database on the
+        device.\n
+        Clicking \"Add a contact\" adds a new contact named "__DUMMY ENTRY" directly into the
+        database.\n
+        Clicking \"Show first contact\" accesses the contact database to display the name of the
+        first contact.
+    </string>
+    <string name="camera_unavailable"><b>Camera could not be opened.</b>\nThis occurs when the
+        camera is not available (for example it is already in use) or if the system has denied
+        access (for example when camera access has been disabled).
+    </string>
+    <string name="back">Back</string>
+    <string name="show_camera">Show camera preview</string>
+    <string name="show_contacts">Show and add contacts</string>
+    <string name="show_multi">request multi permission</string>
+    <string name="main_introduction">Click the buttons below to show a camera preview or access the
+        contacts database.\nNote that the contacts option is only available on Android M to
+        illustrate the use of optional, M-only permissions that are not requested on lower SDK
+        platforms.
+    </string>
+    <string name="permision_available_camera">Camera Permission has been granted. Preview can now be
+        opened.
+    </string>
+    <string name="permision_available_contacts">Contacts Permissions have been granted. Contacts
+        screen can now be opened.
+    </string>
+    <string name="permissions_not_granted">Permissions were not granted.</string>
+    <string name="permission_camera_rationale">Camera permission is needed to show the camera
+        preview.
+    </string>
+    <string name="permission_contacts_rationale">Contacts permissions are needed to demonstrate
+        access.
+    </string>
+    <string name="permission_camera_user_hint">test onRequestPermissionsResult:
+        没有此权限，无法开启这个功能，请开启权限。请打开照相机权限
+    </string>
+    <string name="permission_camera_user_hint1">test shouldShowRequestPermissionRationale:
+        没有此权限，无法开启这个功能，请开启权限。请打开照相机权限
+    </string>
+
+
+    <string name="permission_get_accounts_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_GET_ACCOUNTS
+    </string>
+    <string name="permission_read_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_PHONE_STATE
+    </string>
+    <string name="permission_call_phone_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CALL_PHONE</string>
+    <string name="permission_camera_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_CAMERA</string>
+    <string name="permission_access_fine_location_hint">
+        没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_FINE_LOCATION
+    </string>
+    <string name="permission_access_coarse_location_hint">
+        没有此权限，无法开启这个功能，请开启权限。PERMISSION_ACCESS_COARSE_LOCATION
+    </string>
+    <string name="permission_read_external_hint">
+        没有此权限，无法开启这个功能，请开启权限。PERMISSION_READ_EXTERNAL_STORAGE
+    </string>
+    <string name="permission_white_external_hint">
+        没有此权限，无法开启这个功能，请开启权限。PERMISSION_WRITE_EXTERNAL_STORAGE
+    </string>
+    <string name="permission_recode_audio_hint">没有此权限，无法开启这个功能，请开启权限。PERMISSION_RECORD_AUDIO
+    </string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+</resources>

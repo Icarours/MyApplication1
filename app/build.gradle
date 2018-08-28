@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.syl.myapplication1"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        //httpClint先用下面这个,
+        useLibrary 'org.apache.http.legacy'//添加httpclient
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    //解决不同依赖包使用库文件差异导致的错误
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == 'com.android.support') {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion '26.1.0'//指定自身使用的sdk版本
+                }
+            }
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.2'
+    implementation 'com.android.support:support-vector-drawable:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    configurations.all {
+        resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
+    }
+    //compile group: 'org.xutils', name: 'xutils', version: '3.5.0'
+    implementation files('libs/xUtils-2.6.14.jar')
+    compile 'cz.msebera.android:httpclient:4.4.1.2'
+    //httpClient
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    annotationProcessor 'com.jakewharton:butterknife:7.0.1'
+    // https://mvnrepository.com/artifact/com.google.code.gson/gson
+    compile 'com.google.code.gson:gson:2.8.1'
+    implementation project(':vitamio_lib')
+    //轮播图框架
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    //universalimageloader图片加载
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    //fresco图片加载
+    compile 'com.facebook.fresco:fresco:0.9.0'
+    //picasso图片加载
+    compile 'com.squareup.picasso:picasso:2.71828'
+    //一个印度开发者写的申请动态权限的框架,简单好用
+    compile 'com.master.android:permissionhelper:2.0'
+
+    compile 'de.greenrobot:greendao:2.1.0'
+    compile 'de.greenrobot:greendao-generator:2.1.0'
+
+
+    //shared SDK 分享
+    implementation files('libs/MobCommons-2018.0816.1650.jar')
+    implementation files('libs/MobTools-2018.0817.1730.jar')
+    implementation files('libs/ShareSDK-Core-3.2.1.jar')
+    implementation files('libs/ShareSDK-Email-3.2.1.jar')
+    implementation files('libs/ShareSDK-Facebook-3.2.1.jar')
+    implementation files('libs/ShareSDK-Linkedin-3.2.1.jar')
+    implementation files('libs/ShareSDK-QQ-3.2.1.jar')
+    implementation files('libs/ShareSDK-QZone-3.2.1.jar')
+    implementation files('libs/ShareSDK-ShortMessage-3.2.1.jar')
+    implementation files('libs/ShareSDK-SinaWeibo-3.2.1.jar')
+    implementation files('libs/ShareSDK-TencentWeibo-3.2.1.jar')
+    implementation files('libs/ShareSDK-Twitter-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Core-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Favorite-3.2.1.jar')
+    implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
+}
+
+

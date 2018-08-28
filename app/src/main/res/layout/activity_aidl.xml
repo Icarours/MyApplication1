@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.syl.myapplication1.activity.AidlActivity">
+
+    <Button
+        android:id="@+id/btn_add_person"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="添加" app:layout_constraintStart_toEndOf="@+id/btn_aidl_bind"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_person"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:scrollbars="vertical"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_add_person"/>
+    <Button
+        android:id="@+id/btn_aidl_bind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="绑定" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_aidl_display"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="显示所有" app:layout_constraintStart_toEndOf="@+id/btn_add_person"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_aidl_unbind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" android:text="解绑"
+        app:layout_constraintStart_toEndOf="@+id/btn_aidl_display"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="0dp"
+        android:scrollbars="vertical"
+        android:layout_height="wrap_content" android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_person"/>
+</android.support.constraint.ConstraintLayout>

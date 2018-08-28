@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_lv_demo1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="lvDemo1" android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_glide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="glide" android:textAllCaps="false"
+        app:layout_constraintStart_toEndOf="@+id/btn_lv_demo1"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_picasso"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" android:text="Picasso"
+        app:layout_constraintStart_toEndOf="@+id/btn_glide"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_fresco"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content" android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="fresco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_picasso"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_url_image_loader"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" android:text="url_image_loader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_lv_demo1"/>
+    <Button
+        android:id="@+id/btn_arc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" android:text="圆形统计图"
+        app:layout_constraintStart_toEndOf="@+id/btn_url_image_loader"
+        app:layout_constraintTop_toBottomOf="@+id/btn_glide"/>
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" android:text="分享"
+        app:layout_constraintStart_toEndOf="@+id/btn_arc"
+        app:layout_constraintTop_toBottomOf="@+id/btn_picasso"/>
+    <Button
+        android:id="@+id/btn_jpush"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" android:text="极光推送"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_url_image_loader"/>
+</android.support.constraint.ConstraintLayout>
