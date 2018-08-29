@@ -4,4 +4,8 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_framework">framework</string>
+    <string name="green_dao_tv_content">
+        1.添加依赖,\n
+        2.编写实体类,编译相关的module,生成相关类,\n
+        3.调用生成的类的方法,增删改查.\n</string>
 </resources>
