@@ -71,11 +71,8 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.71828'
     //一个印度开发者写的申请动态权限的框架,简单好用
     compile 'com.master.android:permissionhelper:2.0'
-
     compile 'de.greenrobot:greendao:2.1.0'
     compile 'de.greenrobot:greendao-generator:2.1.0'
-
-
     //shared SDK 分享
     implementation files('libs/MobCommons-2018.0816.1650.jar')
     implementation files('libs/MobTools-2018.0817.1730.jar')
@@ -93,6 +90,10 @@ dependencies {
     implementation files('libs/ShareSDK-Wechat-Core-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Favorite-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
+    implementation files('libs/agent_lss-4.6.0-20180615.073737-3.jar')
+    implementation files('libs/bdplayer.jar')
+//    implementation project(':baiduplayer')
 }
+
 
 

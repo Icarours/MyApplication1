@@ -64,3 +64,7 @@
 -dontwarn cn.jpush.**
 -keep class cn.jpush.** { *; }
 
+#百度播放器,禁止混淆的代码
+-libraryjars libs/bdplayer.jar
+-keep class com.baidu.cloud.media.**{ *;}
+

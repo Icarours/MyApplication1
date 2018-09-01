@@ -209,5 +209,12 @@
             android:text="逐帧动画"
             app:layout_constraintStart_toEndOf="@+id/btn_property_animation"
             app:layout_constraintTop_toBottomOf="@+id/btn_vitamio"/>
+        <Button
+            android:id="@+id/btn_baidu_player"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp" android:text="百度播放器"
+            app:layout_constraintStart_toEndOf="@+id/btn_frame_animation"
+            app:layout_constraintTop_toBottomOf="@+id/btn_tuya"/>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

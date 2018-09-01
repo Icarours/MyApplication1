@@ -9,9 +9,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-
-
-
     <string name="tv_memory_leak">两个思路加载显示图片(两种思路都行): 1.直接在本Activity中使用OkHttp异步加载,获取资源,显示图片
         2.使用service,在service中使用OkHttp异步加载图片资源,然后将数据通过Connection回传给Activity 第二种方式出现了内存泄露,不推荐这种方式.
         绑定service之前,一定要先启动service

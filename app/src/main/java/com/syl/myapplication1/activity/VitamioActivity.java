@@ -35,6 +35,7 @@ public class VitamioActivity extends AppCompatActivity {
         //        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         final VideoView vv = findViewById(R.id.vv);
         //视频地址
+//        String VIDEOURL = "http://60.205.177.21/cloud_platform_release/html/upload/zhineng/Stone_bridge20180830181720.avi";
         String VIDEOURL = "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
         //直播地址
         String VIDEOURL1 = "http://devimages.apple.com/iphone/samples/bipbop/bipbopall.m3u8";

@@ -35,7 +35,7 @@ import com.syl.myapplication1.activity.WeatherForecastActivity;
 /**
  * Created by Bright on 2018/7/2.
  *
- * @Describe 展示主题内容的布局,主菜单(底部菜单)对应的第一个按钮
+ * @Describe 展示主题内容的布局, 主菜单(底部菜单)对应的第一个按钮
  * @Called
  */
 
@@ -82,6 +82,7 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
         contentRootView.findViewById(R.id.btn_music).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_property_animation).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_frame_animation).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_baidu_player).setOnClickListener(this);
         return contentRootView;
     }
 
@@ -169,6 +170,9 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
                 break;
             case R.id.btn_frame_animation:
                 intent.setClass(getActivity(), FrameAnimationActivity.class);
+                break;
+            case R.id.btn_baidu_player:
+//                intent.setClass(getActivity(), BaiduPlayerActivity.class);
                 break;
             default:
                 break;

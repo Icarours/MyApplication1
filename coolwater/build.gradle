@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     configurations.all {
         resolutionStrategy.force 'com.android.support:support-annotations:26.1.0'
     }
@@ -54,5 +54,7 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife:7.0.1'
     compile 'org.greenrobot:greendao:3.0.1'
     compile 'org.greenrobot:greendao-generator:3.0.0'
-
+    //最新代码还没更新到 jcenter 仓库，推荐使用方法二依赖项目
+    compile 'com.github.baserecycleradapter:library:1.1.0'
+//    implementation project(':baiduplayer')
 }
