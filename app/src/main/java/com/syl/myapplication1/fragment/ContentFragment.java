@@ -6,6 +6,7 @@ import android.view.View;
 import com.syl.myapplication1.R;
 import com.syl.myapplication1.activity.AidlActivity;
 import com.syl.myapplication1.activity.AliPayActivity;
+import com.syl.myapplication1.activity.BaiduPlayerActivity;
 import com.syl.myapplication1.activity.BanZhengActivity;
 import com.syl.myapplication1.activity.BankActivity;
 import com.syl.myapplication1.activity.ContactsActivity;
@@ -172,7 +173,7 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
                 intent.setClass(getActivity(), FrameAnimationActivity.class);
                 break;
             case R.id.btn_baidu_player:
-//                intent.setClass(getActivity(), BaiduPlayerActivity.class);
+                intent.setClass(getActivity(), BaiduPlayerActivity.class);
                 break;
             default:
                 break;

@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 26
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.syl.myapplication1"
         minSdkVersion 16
@@ -25,7 +26,7 @@ android {
             def requested = details.requested
             if (requested.group == 'com.android.support') {
                 if (!requested.name.startsWith("multidex")) {
-                    details.useVersion '26.1.0'//指定自身使用的sdk版本
+                    details.useVersion '26.0.2'//指定自身使用的sdk版本
                 }
             }
         }
@@ -35,6 +36,14 @@ android {
             jniLibs.srcDirs = ['libs']
         }
     }
+    packagingOptions {//加上这写代码
+        pickFirst 'lib/armeabi-v7a/libstlport_shared.so'
+        pickFirst 'lib/armeabi-v8a/libstlport_shared.so'
+        pickFirst 'lib/arm64-v8a/libstlport_shared.so'
+        pickFirst 'lib/x86/libstlport_shared.so'
+        pickFirst 'lib/x86_64/libstlport_shared.so'
+    }
+
 }
 
 dependencies {
@@ -90,9 +99,7 @@ dependencies {
     implementation files('libs/ShareSDK-Wechat-Core-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Favorite-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
-    implementation files('libs/agent_lss-4.6.0-20180615.073737-3.jar')
-    implementation files('libs/bdplayer.jar')
-//    implementation project(':baiduplayer')
+    implementation project(':baiduplayer_lib')
 }
 
 

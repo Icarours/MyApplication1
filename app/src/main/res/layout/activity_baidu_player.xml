@@ -6,25 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.syl.myapplication1.activity.BaiduPlayerActivity">
-    <RelativeLayout
-        android:id="@+id/root"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:onClick="onClickEmptyArea"
-        android:orientation="horizontal">
 
-        <RelativeLayout
-            android:id="@+id/view_holder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true">
-        </RelativeLayout>
-
-        <com.baidu.cloud.videoplayer.demo.bar.SimpleMediaController
-            android:id="@+id/media_controller_bar"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"/>
-
-    </RelativeLayout>
+    <Button
+        android:id="@+id/btn_baidu_player"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="百度播放器" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="tv_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
 </android.support.constraint.ConstraintLayout>

@@ -1,1 +1,1 @@
-include ':app', ':myapplication1aid', ':vitamio_lib', ':googleplay3', ':lib_java', ':JPushExample(1047076)', ':coolwater', ':baiduplayer'
+include ':app', ':myapplication1aid', ':vitamio_lib', ':googleplay3', ':lib_java', ':JPushExample(1047076)', ':coolwater',":baiduplayer_lib"
