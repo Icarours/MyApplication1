@@ -1,0 +1,38 @@
+apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
+
+    defaultConfig {
+        //applicationId "com.baidu.cloud.videoplayer.demo"
+        versionCode 2
+        versionName "2.0"
+        minSdkVersion 16
+        targetSdkVersion 26
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+task makeJar(type: Copy) {
+    delete 'build/libs/baiduplayer_lib.jar' //删除已经存在的jar包
+//    from('build/intermediates/bundles/release/')//从该目录下加载要打包的文件
+    from('build/intermediates/intermediate-jars/release/')//从该目录下加载要打包的文件
+    into('build/libs/')//jar包的保存目录
+    include('classes.jar')//设置过滤，只打包classes文件
+    rename('classes.jar', 'baiduplayer_lib.jar')//重命名，baiduplayer_lib.jar 根据自己的需求设置
+}
+makeJar.dependsOn(build)
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestImplementation 'junit:junit:4.12'
+}
