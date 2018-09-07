@@ -22,28 +22,28 @@
         app:layout_constraintTop_toTopOf="parent"/>
     <Button
         android:id="@+id/btn_picasso"
-        android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp" android:text="Picasso"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="Picasso" android:textAllCaps="false"
         app:layout_constraintStart_toEndOf="@+id/btn_glide"
         app:layout_constraintTop_toTopOf="parent"/>
     <Button
         android:id="@+id/btn_fresco"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="fresco"
         android:textAllCaps="false"
-        android:layout_height="wrap_content" android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-        android:text="fresco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_picasso"
         app:layout_constraintTop_toTopOf="parent"/>
     <Button
         android:id="@+id/btn_url_image_loader"
-        android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp" android:text="url_image_loader"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="url_image_loader" android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_lv_demo1"/>
     <Button
@@ -67,4 +67,36 @@
         android:layout_marginTop="8dp" android:text="极光推送"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_url_image_loader"/>
+    <Button
+        android:id="@+id/btn_rv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="recycleView"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_jpush"
+        app:layout_constraintTop_toBottomOf="@+id/btn_arc"/>
+    <Button
+        android:id="@+id/btn_rv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="rv2"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_rv"
+        app:layout_constraintTop_toBottomOf="@+id/btn_arc"/>
+    <Button
+        android:id="@+id/btn_rx_easy_http"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="RxEasyHttp"
+        android:textAllCaps="false" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_jpush"/>
+    <Button
+        android:id="@+id/btn_rv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="rv3" app:layout_constraintStart_toEndOf="@+id/btn_rx_easy_http"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rv"/>
 </android.support.constraint.ConstraintLayout>

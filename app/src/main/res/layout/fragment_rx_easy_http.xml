@@ -6,20 +6,20 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/btn_green_dao"
+        android:id="@+id/btn_post1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="greenDao" android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="post1"
+        android:textAllCaps="false" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <Button
-        android:id="@+id/btn_activity_fragment"
+        android:id="@+id/btn_post2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:text="交换数据" android:textAllCaps="false"
-        app:layout_constraintStart_toEndOf="@+id/btn_green_dao"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="post2"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_post1"
         app:layout_constraintTop_toTopOf="parent"/>
 </android.support.constraint.ConstraintLayout>

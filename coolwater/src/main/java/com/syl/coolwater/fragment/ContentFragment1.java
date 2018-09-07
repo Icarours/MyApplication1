@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.syl.coolwater.Main1Activity;
 import com.syl.coolwater.R;
 import com.syl.coolwater.activity.ContentActivity;
 
@@ -24,8 +25,9 @@ public class ContentFragment1 extends BaseFragment implements View.OnClickListen
     private static final int BTN_GREEN_DAO = 1;//greenDao
     @Bind(R.id.btn_green_dao)
     Button mBtnGreenDao;
-    @Bind(R.id.button2)
-    Button mButton2;
+    @Bind(R.id.btn_activity_fragment)
+    Button mBtnActivityFragment;
+
 
     @Override
     protected void init() {
@@ -42,6 +44,7 @@ public class ContentFragment1 extends BaseFragment implements View.OnClickListen
         View rootView = View.inflate(getActivity(), R.layout.fragment_content1, null);
         ButterKnife.bind(this, rootView);
         mBtnGreenDao.setOnClickListener(this);
+        mBtnActivityFragment.setOnClickListener(this);
         return rootView;
     }
 
@@ -61,14 +64,19 @@ public class ContentFragment1 extends BaseFragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.btn_green_dao:
-                Intent intent = new Intent(getActivity(),ContentActivity.class);
-                intent.putExtra("fragment_code",BTN_GREEN_DAO);
-                startActivity(intent);
+                intent = new Intent(getActivity(), ContentActivity.class);
+                intent.putExtra("fragment_code", BTN_GREEN_DAO);
+                break;
+            case R.id.btn_activity_fragment:
+                intent = new Intent(getActivity(), Main1Activity.class);
+                intent.putExtra("fragment_code", BTN_GREEN_DAO);
                 break;
             default:
                 break;
         }
+        startActivity(intent);
     }
 }

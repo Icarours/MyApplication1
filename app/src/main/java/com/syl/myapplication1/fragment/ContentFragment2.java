@@ -1,7 +1,10 @@
 package com.syl.myapplication1.fragment;
 
 import android.content.Intent;
+import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.syl.myapplication1.R;
@@ -26,6 +29,10 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     private static final int BTN_ARC = 6;//自定义view,圆形统计图
     private static final int BTN_SHARE = 7;//mob sharedSDK 分享
     private static final int BTN_JPUSH = 8;//极光推送
+    private static final int BTN_RV = 9;//recycleView
+    private static final int BTN_RV2 = 10;//recycleView2
+    private static final int BTN_RX_EASY_HTTP = 11;//RxEasyHttp
+    private static final int BTN_RV3 = 12;//recycleView3
     @Bind(R.id.btn_lv_demo1)
     Button mBtnLvDemo1;
     @Bind(R.id.btn_glide)
@@ -42,6 +49,14 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     Button mBtnShare;
     @Bind(R.id.btn_jpush)
     Button mBtnJpush;
+    @Bind(R.id.btn_rv)
+    Button mBtnRv;
+    @Bind(R.id.btn_rv2)
+    Button mBtnRv2;
+    @Bind(R.id.btn_rx_easy_http)
+    Button mBtnRxEasyHttp;
+    @Bind(R.id.btn_rv3)
+    Button mBtnRv3;
     private View mRootView;
 
     @Override
@@ -65,6 +80,10 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
         mBtnArc.setOnClickListener(this);
         mBtnShare.setOnClickListener(this);
         mBtnJpush.setOnClickListener(this);
+        mBtnRv.setOnClickListener(this);
+        mBtnRv2.setOnClickListener(this);
+        mBtnRxEasyHttp.setOnClickListener(this);
+        mBtnRv3.setOnClickListener(this);
         return mRootView;
     }
 
@@ -108,9 +127,29 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
             case R.id.btn_jpush:
                 intent.putExtra("btn_code", BTN_JPUSH);
                 break;
+            case R.id.btn_rv:
+                intent.putExtra("btn_code", BTN_RV);
+                break;
+            case R.id.btn_rv2:
+                intent.putExtra("btn_code", BTN_RV2);
+                break;
+            case R.id.btn_rx_easy_http:
+                intent.putExtra("btn_code", BTN_RX_EASY_HTTP);
+                break;
+            case R.id.btn_rv3:
+                intent.putExtra("btn_code", BTN_RV3);
+                break;
             default:
                 break;
         }
         startActivity(intent);
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // TODO: inflate a fragment view
+        View rootView = super.onCreateView(inflater, container, savedInstanceState);
+        ButterKnife.bind(this, rootView);
+        return rootView;
     }
 }

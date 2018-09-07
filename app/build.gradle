@@ -100,6 +100,11 @@ dependencies {
     implementation files('libs/ShareSDK-Wechat-Favorite-3.2.1.jar')
     implementation files('libs/ShareSDK-Wechat-Moments-3.2.1.jar')
     implementation project(':baiduplayer_lib')
+    //BRVAH RecycleView封装框架
+    //    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //网络请求框架
+    compile 'com.zhouyou:rxeasyhttp:2.1.2'
+    implementation project(':library_recycler')
 }
 
 

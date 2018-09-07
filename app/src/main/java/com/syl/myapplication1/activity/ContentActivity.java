@@ -13,6 +13,10 @@ import com.syl.myapplication1.fragment.GlideFragment;
 import com.syl.myapplication1.fragment.JpushFragment;
 import com.syl.myapplication1.fragment.LvDemoFragment;
 import com.syl.myapplication1.fragment.PicassoFragment;
+import com.syl.myapplication1.fragment.RecycleView2Fragment;
+import com.syl.myapplication1.fragment.RecycleView3Fragment;
+import com.syl.myapplication1.fragment.RecycleViewFragment;
+import com.syl.myapplication1.fragment.RxEasyHttpFragment;
 import com.syl.myapplication1.fragment.ShareFragment;
 import com.syl.myapplication1.fragment.UrlImageLoaderFragment;
 
@@ -38,6 +42,10 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_ARC = 6;//自定义view,圆形统计图
     private static final int BTN_SHARE = 7;//mob sharedSDK 分享
     private static final int BTN_JPUSH = 8;//极光推送
+    private static final int BTN_RV = 9;//recycleView
+    private static final int BTN_RV2 = 10;//recycleView2
+    private static final int BTN_RX_EASY_HTTP = 11;//RxEasyHttp
+    private static final int BTN_RV3 = 12;//recycleView3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +83,18 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_JPUSH:
                 transaction.replace(R.id.fl_content, new JpushFragment());
+                break;
+            case BTN_RV:
+                transaction.replace(R.id.fl_content, new RecycleViewFragment());
+                break;
+            case BTN_RV2:
+                transaction.replace(R.id.fl_content, new RecycleView2Fragment());
+                break;
+            case BTN_RX_EASY_HTTP:
+                transaction.replace(R.id.fl_content, new RxEasyHttpFragment());
+                break;
+            case BTN_RV3:
+                transaction.replace(R.id.fl_content, new RecycleView3Fragment());
                 break;
             default:
                 break;
