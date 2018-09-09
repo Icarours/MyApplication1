@@ -216,5 +216,31 @@
             android:layout_marginTop="8dp" android:text="百度播放器"
             app:layout_constraintStart_toEndOf="@+id/btn_frame_animation"
             app:layout_constraintTop_toBottomOf="@+id/btn_tuya"/>
+        <Button
+            android:id="@+id/btn_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="rv"
+            android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_baidu_player"
+            app:layout_constraintTop_toBottomOf="@+id/btn_music"/>
+        <Button
+            android:id="@+id/btn_rv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="rv2"
+            android:textAllCaps="false" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rv"/>
+        <Button
+            android:id="@+id/btn_rv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp" android:text="rv3"
+            android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_rv2"
+            app:layout_constraintTop_toBottomOf="@+id/btn_frame_animation"/>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>

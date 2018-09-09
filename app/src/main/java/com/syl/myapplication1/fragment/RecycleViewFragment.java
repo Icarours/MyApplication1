@@ -6,8 +6,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
-import com.github.library.BaseQuickAdapter;
-import com.github.library.BaseViewHolder;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.chad.library.adapter.base.BaseViewHolder;
 import com.syl.myapplication1.R;
 import com.syl.myapplication1.domain.QinEntity;
 

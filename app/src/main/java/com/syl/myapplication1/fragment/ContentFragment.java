@@ -22,6 +22,9 @@ import com.syl.myapplication1.activity.NotificationActivity;
 import com.syl.myapplication1.activity.ObserverActivity;
 import com.syl.myapplication1.activity.PropertyAnimationActivity;
 import com.syl.myapplication1.activity.QQActivity;
+import com.syl.myapplication1.activity.RV2Activity;
+import com.syl.myapplication1.activity.RV3Activity;
+import com.syl.myapplication1.activity.RVActivity;
 import com.syl.myapplication1.activity.ReceiverActivity;
 import com.syl.myapplication1.activity.ServiceActivity;
 import com.syl.myapplication1.activity.SmsActivity;
@@ -84,6 +87,9 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
         contentRootView.findViewById(R.id.btn_property_animation).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_frame_animation).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_baidu_player).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_rv).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_rv2).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_rv3).setOnClickListener(this);
         return contentRootView;
     }
 
@@ -174,6 +180,15 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
                 break;
             case R.id.btn_baidu_player:
                 intent.setClass(getActivity(), BaiduPlayerActivity.class);
+                break;
+            case R.id.btn_rv:
+                intent.setClass(getActivity(), RVActivity.class);
+                break;
+            case R.id.btn_rv2:
+                intent.setClass(getActivity(), RV2Activity.class);
+                break;
+            case R.id.btn_rv3:
+                intent.setClass(getActivity(), RV3Activity.class);
                 break;
             default:
                 break;

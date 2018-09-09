@@ -8,6 +8,7 @@
     <ImageView
         android:id="@+id/iv_photo"
         android:layout_width="100dp"
+        android:contentDescription="@string/app_name"
         android:layout_height="100dp"
         android:src="@drawable/ic_photo"
         android:scaleType="center"
