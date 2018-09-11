@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.syl.myapplication1">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
     //添加默认震动效果,需要申请震动权限
     <uses-permission android:name="android.permission.VIBRATE"/>
     <!-- 允许程序发送SMS短信 -->
@@ -386,6 +388,20 @@
         </activity>
         <activity android:name=".activity.RV3Activity">
         </activity>
+        <activity android:name=".activity.PhotoActivity">
+        </activity>
+        <activity android:name=".activity.ResultActivity">
+        </activity>
+        <activity android:name=".activity.Photo2Activity">
+        </activity>
+        <activity android:name=".activity.ResultActivity2">
+        </activity>
+        <activity android:name=".activity.PhotoVideoActivity">
+        </activity>
+        <activity android:name=".activity.PickViewActivity">
+        </activity>
+        <activity android:name=".pick_view.JsonDataActivity"/>
+        <activity android:name=".pick_view.FragmentTestActivity"/>
     </application>
 
 </manifest>

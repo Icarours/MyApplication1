@@ -68,3 +68,10 @@
 -libraryjars libs/bdplayer.jar
 -keep class com.baidu.cloud.media.**{ *;}
 
+#takePoto
+-dontwarn android.support.**
+-keep class android.support.** { *; }
+-keepattributes InnerClasses
+-dontoptimize
+
+

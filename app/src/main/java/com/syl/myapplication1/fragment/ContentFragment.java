@@ -20,6 +20,10 @@ import com.syl.myapplication1.activity.MusicActivity;
 import com.syl.myapplication1.activity.NewsActivity;
 import com.syl.myapplication1.activity.NotificationActivity;
 import com.syl.myapplication1.activity.ObserverActivity;
+import com.syl.myapplication1.activity.Photo2Activity;
+import com.syl.myapplication1.activity.PhotoActivity;
+import com.syl.myapplication1.activity.PhotoVideoActivity;
+import com.syl.myapplication1.activity.PickViewActivity;
 import com.syl.myapplication1.activity.PropertyAnimationActivity;
 import com.syl.myapplication1.activity.QQActivity;
 import com.syl.myapplication1.activity.RV2Activity;
@@ -90,6 +94,10 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
         contentRootView.findViewById(R.id.btn_rv).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_rv2).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_rv3).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_photo).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_photo2).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_photo_video).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_pick_view).setOnClickListener(this);
         return contentRootView;
     }
 
@@ -189,6 +197,18 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
                 break;
             case R.id.btn_rv3:
                 intent.setClass(getActivity(), RV3Activity.class);
+                break;
+            case R.id.btn_photo:
+                intent.setClass(getActivity(), PhotoActivity.class);
+                break;
+            case R.id.btn_photo2:
+                intent.setClass(getActivity(), Photo2Activity.class);
+                break;
+            case R.id.btn_photo_video:
+                intent.setClass(getActivity(), PhotoVideoActivity.class);
+                break;
+            case R.id.btn_pick_view:
+                intent.setClass(getActivity(), PickViewActivity.class);
                 break;
             default:
                 break;

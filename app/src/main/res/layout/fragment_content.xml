@@ -242,5 +242,36 @@
             android:layout_marginTop="8dp" android:text="rv3"
             android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_rv2"
             app:layout_constraintTop_toBottomOf="@+id/btn_frame_animation"/>
+        <Button
+            android:id="@+id/btn_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            android:text="照片" app:layout_constraintStart_toEndOf="@+id/btn_rv3"
+            app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
+        <Button
+            android:id="@+id/btn_photo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            android:text="照片2"
+            app:layout_constraintStart_toEndOf="@+id/btn_photo"
+            app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
+        <Button
+            android:id="@+id/btn_photo_video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            android:text="拍视频"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rv2"
+        />
+        <Button
+            android:id="@+id/btn_pick_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+            android:text="滚轮选择器" app:layout_constraintStart_toEndOf="@+id/btn_photo_video"
+            app:layout_constraintTop_toBottomOf="@+id/btn_rv3"/>
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
