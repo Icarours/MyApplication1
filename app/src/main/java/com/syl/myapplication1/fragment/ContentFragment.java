@@ -38,6 +38,7 @@ import com.syl.myapplication1.activity.TuyaActivity;
 import com.syl.myapplication1.activity.TxtActivity;
 import com.syl.myapplication1.activity.UserXmlActivity;
 import com.syl.myapplication1.activity.VitamioActivity;
+import com.syl.myapplication1.activity.VpActivity;
 import com.syl.myapplication1.activity.WeatherForecastActivity;
 
 /**
@@ -98,6 +99,7 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
         contentRootView.findViewById(R.id.btn_photo2).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_photo_video).setOnClickListener(this);
         contentRootView.findViewById(R.id.btn_pick_view).setOnClickListener(this);
+        contentRootView.findViewById(R.id.btn_view_pager).setOnClickListener(this);
         return contentRootView;
     }
 
@@ -209,6 +211,9 @@ public class ContentFragment extends BaseFragment implements View.OnClickListene
                 break;
             case R.id.btn_pick_view:
                 intent.setClass(getActivity(), PickViewActivity.class);
+                break;
+            case R.id.btn_view_pager:
+                intent.setClass(getActivity(), VpActivity.class);
                 break;
             default:
                 break;

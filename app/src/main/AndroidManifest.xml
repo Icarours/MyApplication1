@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
           package="com.syl.myapplication1">
+    <!--录音机-->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
 
     <uses-permission android:name="android.permission.CAMERA"/>
     //添加默认震动效果,需要申请震动权限
@@ -402,6 +406,8 @@
         </activity>
         <activity android:name=".pick_view.JsonDataActivity"/>
         <activity android:name=".pick_view.FragmentTestActivity"/>
+        <activity android:name=".activity.VpActivity">
+        </activity>
     </application>
 
 </manifest>

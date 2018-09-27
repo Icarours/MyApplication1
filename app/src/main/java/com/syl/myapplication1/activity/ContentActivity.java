@@ -13,12 +13,15 @@ import com.syl.myapplication1.fragment.GlideFragment;
 import com.syl.myapplication1.fragment.JpushFragment;
 import com.syl.myapplication1.fragment.LvDemoFragment;
 import com.syl.myapplication1.fragment.PicassoFragment;
+import com.syl.myapplication1.fragment.Recorder2Fragment;
+import com.syl.myapplication1.fragment.RecorderFragment;
 import com.syl.myapplication1.fragment.RecycleView2Fragment;
 import com.syl.myapplication1.fragment.RecycleView3Fragment;
 import com.syl.myapplication1.fragment.RecycleViewFragment;
 import com.syl.myapplication1.fragment.RxEasyHttpFragment;
 import com.syl.myapplication1.fragment.ShareFragment;
 import com.syl.myapplication1.fragment.UrlImageLoaderFragment;
+import com.syl.myapplication1.fragment.VpTabFmFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -46,6 +49,9 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_RV2 = 10;//recycleView2
     private static final int BTN_RX_EASY_HTTP = 11;//RxEasyHttp
     private static final int BTN_RV3 = 12;//recycleView3
+    private static final int BTN_VP_TAB_FM = 13;//ViewPager+tabLayout+Fragment
+    private static final int BTN_RECORDER = 14;//录音
+    private static final int BTN_RECORDER2 = 15;//录音2
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -95,6 +101,15 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_RV3:
                 transaction.replace(R.id.fl_content, new RecycleView3Fragment());
+                break;
+            case BTN_VP_TAB_FM:
+                transaction.replace(R.id.fl_content, new VpTabFmFragment());
+                break;
+            case BTN_RECORDER:
+                transaction.replace(R.id.fl_content, new RecorderFragment());
+                break;
+            case BTN_RECORDER2:
+                transaction.replace(R.id.fl_content, new Recorder2Fragment());
                 break;
             default:
                 break;

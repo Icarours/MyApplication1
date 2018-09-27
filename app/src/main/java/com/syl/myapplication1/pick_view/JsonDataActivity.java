@@ -7,6 +7,7 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
@@ -80,6 +81,8 @@ public class JsonDataActivity extends AppCompatActivity implements View.OnClickL
     private void initView() {
         findViewById(R.id.btn_data).setOnClickListener(this);
         findViewById(R.id.btn_show).setOnClickListener(this);
+        TextView tvContent = findViewById(R.id.tv_content);
+        tvContent.setText("滚轮控件,读取asset文件夹中的json资源文件");
     }
 
     @Override

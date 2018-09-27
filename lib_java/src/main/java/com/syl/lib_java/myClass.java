@@ -21,4 +21,5 @@ public class myClass {
         teacher.addObserver(new Student4());
         teacher.publishMessage("2018年8月4日19:10:55");
     }
+
 }

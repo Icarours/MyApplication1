@@ -99,4 +99,26 @@
         android:layout_marginStart="8dp" android:layout_marginTop="8dp"
         android:text="rv3" app:layout_constraintStart_toEndOf="@+id/btn_rx_easy_http"
         app:layout_constraintTop_toBottomOf="@+id/btn_rv"/>
+    <Button
+        android:id="@+id/btn_vp_tab_fm"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="vp+tab+fm" app:layout_constraintStart_toEndOf="@+id/btn_rv3"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rv2"/>
+    <Button
+        android:id="@+id/btn_recorder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="录音" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rx_easy_http"/>
+    <Button
+        android:id="@+id/btn_recorder2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="录音2" app:layout_constraintStart_toEndOf="@+id/btn_recorder"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rv3"/>
 </android.support.constraint.ConstraintLayout>

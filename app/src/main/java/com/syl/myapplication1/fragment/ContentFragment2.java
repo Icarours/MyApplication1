@@ -33,6 +33,9 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     private static final int BTN_RV2 = 10;//recycleView2
     private static final int BTN_RX_EASY_HTTP = 11;//RxEasyHttp
     private static final int BTN_RV3 = 12;//recycleView3
+    private static final int BTN_VP_TAB_FM = 13;//ViewPager+tabLayout+Fragment
+    private static final int BTN_RECORDER = 14;//录音
+    private static final int BTN_RECORDER2 = 15;//录音2
     @Bind(R.id.btn_lv_demo1)
     Button mBtnLvDemo1;
     @Bind(R.id.btn_glide)
@@ -57,6 +60,12 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     Button mBtnRxEasyHttp;
     @Bind(R.id.btn_rv3)
     Button mBtnRv3;
+    @Bind(R.id.btn_vp_tab_fm)
+    Button mBtnVpTabFm;
+    @Bind(R.id.btn_recorder)
+    Button mBtnRecorder;
+    @Bind(R.id.btn_recorder2)
+    Button mBtnRecorder2;
     private View mRootView;
 
     @Override
@@ -84,6 +93,9 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
         mBtnRv2.setOnClickListener(this);
         mBtnRxEasyHttp.setOnClickListener(this);
         mBtnRv3.setOnClickListener(this);
+        mBtnVpTabFm.setOnClickListener(this);
+        mBtnRecorder.setOnClickListener(this);
+        mBtnRecorder2.setOnClickListener(this);
         return mRootView;
     }
 
@@ -138,6 +150,15 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
                 break;
             case R.id.btn_rv3:
                 intent.putExtra("btn_code", BTN_RV3);
+                break;
+            case R.id.btn_vp_tab_fm:
+                intent.putExtra("btn_code", BTN_VP_TAB_FM);
+                break;
+            case R.id.btn_recorder:
+                intent.putExtra("btn_code", BTN_RECORDER);
+                break;
+            case R.id.btn_recorder2:
+                intent.putExtra("btn_code", BTN_RECORDER2);
                 break;
             default:
                 break;

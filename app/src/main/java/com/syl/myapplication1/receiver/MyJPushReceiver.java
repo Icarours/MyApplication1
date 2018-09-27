@@ -22,7 +22,7 @@ import cn.jpush.android.api.JPushInterface;
 /**
  * Created by Bright on 2018/8/22.
  *
- * @Describe
+ * @Describe 接收极光推送后台发送的通知,以及自定义消息
  * @Called
  */
 

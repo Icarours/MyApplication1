@@ -1,277 +1,292 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-    <android.support.constraint.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/btn_qq"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="启动QQ" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-        <Button
-            android:id="@+id/btn_save_xml"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="用户管理"
-            app:layout_constraintStart_toEndOf="@+id/btn_qq"
-            app:layout_constraintTop_toTopOf="parent"/>
-        <Button
-            android:id="@+id/btn_student"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" android:text="学生管理"
-            app:layout_constraintStart_toEndOf="@+id/btn_save_xml"
-            app:layout_constraintTop_toTopOf="parent"/>
-        <Button
-            android:id="@+id/btn_sql"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginTop="8dp"
-            android:text="数据库事务"
-            app:layout_constraintStart_toEndOf="@+id/btn_student"
-            app:layout_constraintTop_toTopOf="parent"/>
-        <Button
-            android:id="@+id/btn_load_img_net"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
-            android:text="加载图片"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_qq"/>
-        <Button
-            android:id="@+id/btn_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" android:text="加载文本"
-            app:layout_constraintStart_toEndOf="@+id/btn_load_img_net"
-            app:layout_constraintTop_toBottomOf="@+id/btn_save_xml"/>
-        <Button
-            android:id="@+id/btn_weather_forecast"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" android:text="天气预报"
-            app:layout_constraintStart_toEndOf="@+id/btn_txt"
-            app:layout_constraintTop_toBottomOf="@+id/btn_student"/>
-        <Button
-            android:id="@+id/btn_news"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="新闻v1"
-            app:layout_constraintStart_toEndOf="@+id/btn_weather_forecast"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sql"/>
-        <Button
-            android:id="@+id/btn_file"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="文件的上传和下载"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_load_img_net"/>
-        <Button
-            android:id="@+id/btn_hint_intent"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" android:text="隐式意图"
-            app:layout_constraintStart_toEndOf="@+id/btn_file"
-            app:layout_constraintTop_toBottomOf="@+id/btn_weather_forecast"/>
-        <Button
-            android:id="@+id/btn_receiver"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp" android:text="广播"
-            app:layout_constraintStart_toEndOf="@+id/btn_hint_intent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_news"/>
-        <Button
-            android:id="@+id/btn_service"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
-            android:text="service" android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_file"/>
-        <Button
-            android:id="@+id/btn_ban_zheng"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="办证服务"
-            app:layout_constraintStart_toEndOf="@+id/btn_service"
-            app:layout_constraintTop_toBottomOf="@+id/btn_hint_intent"/>
-        <Button
-            android:id="@+id/btn_alipay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="支付"
-            app:layout_constraintStart_toEndOf="@+id/btn_ban_zheng"
-            app:layout_constraintTop_toBottomOf="@+id/btn_hint_intent"/>
-        <Button
-            android:id="@+id/btn_aidl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="aidl"
-            app:layout_constraintStart_toEndOf="@+id/btn_alipay"
-            app:layout_constraintTop_toBottomOf="@+id/btn_receiver"/>
-        <Button
-            android:id="@+id/btn_bank"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
-            android:text="银行provider" android:textAllCaps="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_service"/>
-        <Button
-            android:id="@+id/btn_sms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="短信"
-            app:layout_constraintStart_toEndOf="@+id/btn_bank"
-            app:layout_constraintTop_toBottomOf="@+id/btn_ban_zheng"/>
-        <Button
-            android:id="@+id/btn_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="通知"
-            app:layout_constraintStart_toEndOf="@+id/btn_sms"
-            app:layout_constraintTop_toBottomOf="@+id/btn_alipay"/>
-        <Button
-            android:id="@+id/btn_observer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="内容观察者"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_bank"/>
-        <Button
-            android:id="@+id/btn_contacts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="联系人"
-            app:layout_constraintStart_toEndOf="@+id/btn_observer"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sms"/>
-        <Button
-            android:id="@+id/btn_img_animation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="图片动画"
-            app:layout_constraintStart_toEndOf="@+id/btn_contacts"
-            app:layout_constraintTop_toBottomOf="@+id/btn_sms"/>
-        <Button
-            android:id="@+id/btn_img_animation2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="图片动画2"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_observer"/>
-        <Button
-            android:id="@+id/btn_vitamio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="vitamio"
-            android:textAllCaps="false"
-            app:layout_constraintStart_toEndOf="@+id/btn_img_animation2"
-            app:layout_constraintTop_toBottomOf="@+id/btn_contacts"/>
-        <Button
-            android:id="@+id/btn_tuya"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="涂鸦"
-            app:layout_constraintStart_toEndOf="@+id/btn_vitamio"
-            app:layout_constraintTop_toBottomOf="@+id/btn_img_animation"/>
-        <Button
-            android:id="@+id/btn_music"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="music"
-            app:layout_constraintStart_toEndOf="@+id/btn_tuya"
-            app:layout_constraintTop_toBottomOf="@+id/btn_img_animation"/>
-        <Button
-            android:id="@+id/btn_property_animation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="属性动画"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_img_animation2"/>
-        <Button
-            android:id="@+id/btn_frame_animation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:text="逐帧动画"
-            app:layout_constraintStart_toEndOf="@+id/btn_property_animation"
-            app:layout_constraintTop_toBottomOf="@+id/btn_vitamio"/>
-        <Button
-            android:id="@+id/btn_baidu_player"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp" android:text="百度播放器"
-            app:layout_constraintStart_toEndOf="@+id/btn_frame_animation"
-            app:layout_constraintTop_toBottomOf="@+id/btn_tuya"/>
-        <Button
-            android:id="@+id/btn_rv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="rv"
-            android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_baidu_player"
-            app:layout_constraintTop_toBottomOf="@+id/btn_music"/>
-        <Button
-            android:id="@+id/btn_rv2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="rv2"
-            android:textAllCaps="false" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rv"/>
-        <Button
-            android:id="@+id/btn_rv3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp" android:text="rv3"
-            android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_rv2"
-            app:layout_constraintTop_toBottomOf="@+id/btn_frame_animation"/>
-        <Button
-            android:id="@+id/btn_photo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            android:text="照片" app:layout_constraintStart_toEndOf="@+id/btn_rv3"
-            app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
-        <Button
-            android:id="@+id/btn_photo2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            android:text="照片2"
-            app:layout_constraintStart_toEndOf="@+id/btn_photo"
-            app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
-        <Button
-            android:id="@+id/btn_photo_video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            android:text="拍视频"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rv2"
-        />
-        <Button
-            android:id="@+id/btn_pick_view"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-            android:text="滚轮选择器" app:layout_constraintStart_toEndOf="@+id/btn_photo_video"
-            app:layout_constraintTop_toBottomOf="@+id/btn_rv3"/>
-    </android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/btn_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="启动QQ" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <Button
+                android:id="@+id/btn_save_xml"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="用户管理"
+                app:layout_constraintStart_toEndOf="@+id/btn_qq"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <Button
+                android:id="@+id/btn_student"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="学生管理"
+                app:layout_constraintStart_toEndOf="@+id/btn_save_xml"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <Button
+                android:id="@+id/btn_sql"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="数据库事务"
+                app:layout_constraintStart_toEndOf="@+id/btn_student"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <Button
+                android:id="@+id/btn_load_img_net"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+                android:text="加载图片"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_qq"/>
+            <Button
+                android:id="@+id/btn_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="加载文本"
+                app:layout_constraintStart_toEndOf="@+id/btn_load_img_net"
+                app:layout_constraintTop_toBottomOf="@+id/btn_save_xml"/>
+            <Button
+                android:id="@+id/btn_weather_forecast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="天气预报"
+                app:layout_constraintStart_toEndOf="@+id/btn_txt"
+                app:layout_constraintTop_toBottomOf="@+id/btn_student"/>
+            <Button
+                android:id="@+id/btn_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="新闻v1"
+                app:layout_constraintStart_toEndOf="@+id/btn_weather_forecast"
+                app:layout_constraintTop_toBottomOf="@+id/btn_sql"/>
+            <Button
+                android:id="@+id/btn_file"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="文件的上传和下载"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_load_img_net"/>
+            <Button
+                android:id="@+id/btn_hint_intent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="隐式意图"
+                app:layout_constraintStart_toEndOf="@+id/btn_file"
+                app:layout_constraintTop_toBottomOf="@+id/btn_weather_forecast"/>
+            <Button
+                android:id="@+id/btn_receiver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:text="广播"
+                app:layout_constraintStart_toEndOf="@+id/btn_hint_intent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_news"/>
+            <Button
+                android:id="@+id/btn_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+                android:text="service" android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_file"/>
+            <Button
+                android:id="@+id/btn_ban_zheng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="办证服务"
+                app:layout_constraintStart_toEndOf="@+id/btn_service"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hint_intent"/>
+            <Button
+                android:id="@+id/btn_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="支付"
+                app:layout_constraintStart_toEndOf="@+id/btn_ban_zheng"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hint_intent"/>
+            <Button
+                android:id="@+id/btn_aidl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="aidl"
+                app:layout_constraintStart_toEndOf="@+id/btn_alipay"
+                app:layout_constraintTop_toBottomOf="@+id/btn_receiver"/>
+            <Button
+                android:id="@+id/btn_bank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+                android:text="银行provider" android:textAllCaps="false"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_service"/>
+            <Button
+                android:id="@+id/btn_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="短信"
+                app:layout_constraintStart_toEndOf="@+id/btn_bank"
+                app:layout_constraintTop_toBottomOf="@+id/btn_ban_zheng"/>
+            <Button
+                android:id="@+id/btn_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="通知"
+                app:layout_constraintStart_toEndOf="@+id/btn_sms"
+                app:layout_constraintTop_toBottomOf="@+id/btn_alipay"/>
+            <Button
+                android:id="@+id/btn_observer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="内容观察者"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_bank"/>
+            <Button
+                android:id="@+id/btn_contacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="联系人"
+                app:layout_constraintStart_toEndOf="@+id/btn_observer"
+                app:layout_constraintTop_toBottomOf="@+id/btn_sms"/>
+            <Button
+                android:id="@+id/btn_img_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="图片动画"
+                app:layout_constraintStart_toEndOf="@+id/btn_contacts"
+                app:layout_constraintTop_toBottomOf="@+id/btn_sms"/>
+            <Button
+                android:id="@+id/btn_img_animation2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="图片动画2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_observer"/>
+            <Button
+                android:id="@+id/btn_vitamio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="vitamio"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_img_animation2"
+                app:layout_constraintTop_toBottomOf="@+id/btn_contacts"/>
+            <Button
+                android:id="@+id/btn_tuya"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="涂鸦"
+                app:layout_constraintStart_toEndOf="@+id/btn_vitamio"
+                app:layout_constraintTop_toBottomOf="@+id/btn_img_animation"/>
+            <Button
+                android:id="@+id/btn_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="music"
+                app:layout_constraintStart_toEndOf="@+id/btn_tuya"
+                app:layout_constraintTop_toBottomOf="@+id/btn_img_animation"/>
+            <Button
+                android:id="@+id/btn_property_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="属性动画"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_img_animation2"/>
+            <Button
+                android:id="@+id/btn_frame_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="逐帧动画"
+                app:layout_constraintStart_toEndOf="@+id/btn_property_animation"
+                app:layout_constraintTop_toBottomOf="@+id/btn_vitamio"/>
+            <Button
+                android:id="@+id/btn_baidu_player"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp" android:text="百度播放器"
+                app:layout_constraintStart_toEndOf="@+id/btn_frame_animation"
+                app:layout_constraintTop_toBottomOf="@+id/btn_tuya"/>
+            <Button
+                android:id="@+id/btn_rv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="rv"
+                android:textAllCaps="false"
+                app:layout_constraintStart_toEndOf="@+id/btn_baidu_player"
+                app:layout_constraintTop_toBottomOf="@+id/btn_music"/>
+            <Button
+                android:id="@+id/btn_rv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="rv2"
+                android:textAllCaps="false" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_rv"/>
+            <Button
+                android:id="@+id/btn_rv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" android:text="rv3"
+                android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_rv2"
+                app:layout_constraintTop_toBottomOf="@+id/btn_frame_animation"/>
+            <Button
+                android:id="@+id/btn_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                android:text="照片" app:layout_constraintStart_toEndOf="@+id/btn_rv3"
+                app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
+            <Button
+                android:id="@+id/btn_photo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                android:text="照片2"
+                app:layout_constraintStart_toEndOf="@+id/btn_photo"
+                app:layout_constraintTop_toBottomOf="@+id/btn_baidu_player"/>
+            <Button
+                android:id="@+id/btn_photo_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                android:text="拍视频"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btn_rv2"
+            />
+            <Button
+                android:id="@+id/btn_pick_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+                android:text="滚轮选择器" app:layout_constraintStart_toEndOf="@+id/btn_photo_video"
+                app:layout_constraintTop_toBottomOf="@+id/btn_rv3"/>
+            <Button
+                android:id="@+id/btn_view_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp" android:text="tab+vp+fm"
+                android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_pick_view"
+                app:layout_constraintTop_toBottomOf="@+id/btn_photo"/>
+        </android.support.constraint.ConstraintLayout>
+    </LinearLayout>
 </ScrollView>
