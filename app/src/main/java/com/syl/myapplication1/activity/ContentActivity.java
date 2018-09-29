@@ -13,6 +13,7 @@ import com.syl.myapplication1.fragment.GlideFragment;
 import com.syl.myapplication1.fragment.JpushFragment;
 import com.syl.myapplication1.fragment.LvDemoFragment;
 import com.syl.myapplication1.fragment.PicassoFragment;
+import com.syl.myapplication1.fragment.PopFragment;
 import com.syl.myapplication1.fragment.Recorder2Fragment;
 import com.syl.myapplication1.fragment.RecorderFragment;
 import com.syl.myapplication1.fragment.RecycleView2Fragment;
@@ -52,6 +53,7 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_VP_TAB_FM = 13;//ViewPager+tabLayout+Fragment
     private static final int BTN_RECORDER = 14;//录音
     private static final int BTN_RECORDER2 = 15;//录音2
+    private static final int BTN_POP = 16;//弹出式菜单
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +112,9 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_RECORDER2:
                 transaction.replace(R.id.fl_content, new Recorder2Fragment());
+                break;
+            case BTN_POP:
+                transaction.replace(R.id.fl_content, new PopFragment());
                 break;
             default:
                 break;

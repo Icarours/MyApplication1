@@ -23,6 +23,8 @@ import cn.jpush.android.api.JPushInterface;
  * Created by Bright on 2018/8/22.
  *
  * @Describe 接收极光推送后台发送的通知,以及自定义消息
+ * 接收信息的是Bundle,(也就是信息的载体是Bundle),所以接收后台推送信息的代码可以写在onReceive()方法的任何位置,
+ * 官方demo中的if else if分支语句结构只是为了区分推送的是哪一种信息,或者用户执行了什么操作.
  * @Called
  */
 
@@ -31,6 +33,7 @@ public class MyJPushReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
+        //接收信息的是Bundle,(也就是信息的载体是Bundle),所以接收后台推送信息的代码可以写在onReceive()方法的任何位置,官方demo中的if else if分支语句结构只是为了区分推送的是哪一种信息,或者用户执行了什么操作.
         Bundle bundle = intent.getExtras();
 
         Log.d(TAG, "onReceive - " + intent.getAction());

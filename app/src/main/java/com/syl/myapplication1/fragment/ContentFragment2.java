@@ -36,6 +36,7 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     private static final int BTN_VP_TAB_FM = 13;//ViewPager+tabLayout+Fragment
     private static final int BTN_RECORDER = 14;//录音
     private static final int BTN_RECORDER2 = 15;//录音2
+    private static final int BTN_POP = 16;//弹出式菜单
     @Bind(R.id.btn_lv_demo1)
     Button mBtnLvDemo1;
     @Bind(R.id.btn_glide)
@@ -66,6 +67,8 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     Button mBtnRecorder;
     @Bind(R.id.btn_recorder2)
     Button mBtnRecorder2;
+    @Bind(R.id.btn_pop)
+    Button mBtnPop;
     private View mRootView;
 
     @Override
@@ -95,7 +98,10 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
         mBtnRv3.setOnClickListener(this);
         mBtnVpTabFm.setOnClickListener(this);
         mBtnRecorder.setOnClickListener(this);
+        mBtnRecorder.setVisibility(View.GONE);
         mBtnRecorder2.setOnClickListener(this);
+        mBtnRecorder2.setVisibility(View.GONE);
+        mBtnPop.setOnClickListener(this);
         return mRootView;
     }
 
@@ -154,11 +160,14 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
             case R.id.btn_vp_tab_fm:
                 intent.putExtra("btn_code", BTN_VP_TAB_FM);
                 break;
-            case R.id.btn_recorder:
+            case R.id.btn_recorder://功能没有完成,隐藏该按钮
                 intent.putExtra("btn_code", BTN_RECORDER);
                 break;
-            case R.id.btn_recorder2:
+            case R.id.btn_recorder2://功能没有完成,隐藏该按钮
                 intent.putExtra("btn_code", BTN_RECORDER2);
+                break;
+            case R.id.btn_pop:
+                intent.putExtra("btn_code", BTN_POP);
                 break;
             default:
                 break;
