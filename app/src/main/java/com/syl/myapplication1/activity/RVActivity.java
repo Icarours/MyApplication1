@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+
 /**
  * author   Bright
  * date     2018/9/9 11:00
@@ -27,12 +29,16 @@ public class RVActivity extends AppCompatActivity implements View.OnClickListene
 
     @Bind(R.id.recycler)
     RecyclerView mRecycler;
+    @Bind(R.id.tv_content)
+    TextView mTvContent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rv);
         ButterKnife.bind(this);
+        mTvContent.setText("RecyclerView原生的用法");
+        mTvContent.setMovementMethod(ScrollingMovementMethod.getInstance());
 
         LinearLayoutManager manager = new LinearLayoutManager(this);
         manager.setOrientation(LinearLayoutManager.VERTICAL);

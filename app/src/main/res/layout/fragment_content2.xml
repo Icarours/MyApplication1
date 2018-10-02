@@ -101,11 +101,11 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_rv"/>
     <Button
         android:id="@+id/btn_vp_tab_fm"
-        android:textAllCaps="false"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-        android:text="vp+tab+fm" app:layout_constraintStart_toEndOf="@+id/btn_rv3"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="vp+tab+fm"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_rv3"
         app:layout_constraintTop_toBottomOf="@+id/btn_rv2"/>
     <Button
         android:id="@+id/btn_recorder"
@@ -128,4 +128,12 @@
         android:layout_marginStart="8dp" android:layout_marginTop="8dp"
         android:text="弹出式菜单和Toolbar" app:layout_constraintStart_toEndOf="@+id/btn_recorder2"
         app:layout_constraintTop_toBottomOf="@+id/btn_vp_tab_fm"/>
+    <Button
+        android:id="@+id/btn_mp_android_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="MPAndroid Chart" android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
 </android.support.constraint.ConstraintLayout>

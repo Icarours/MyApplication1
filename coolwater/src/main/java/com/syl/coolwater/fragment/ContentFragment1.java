@@ -40,19 +40,11 @@ public class ContentFragment1 extends BaseFragment implements View.OnClickListen
     }
 
     @Override
-    public View initView() {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = View.inflate(getActivity(), R.layout.fragment_content1, null);
         ButterKnife.bind(this, rootView);
         mBtnGreenDao.setOnClickListener(this);
         mBtnActivityFragment.setOnClickListener(this);
-        return rootView;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
         return rootView;
     }
 
@@ -69,6 +61,7 @@ public class ContentFragment1 extends BaseFragment implements View.OnClickListen
             case R.id.btn_green_dao:
                 intent = new Intent(getActivity(), ContentActivity.class);
                 intent.putExtra("fragment_code", BTN_GREEN_DAO);
+                intent.putExtra("title","greenDao");
                 break;
             case R.id.btn_activity_fragment:
                 intent = new Intent(getActivity(), Main1Activity.class);

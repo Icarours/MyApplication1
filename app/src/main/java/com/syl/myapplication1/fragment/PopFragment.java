@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.syl.myapplication1.R;
 import com.syl.myapplication1.activity.ToolbarActivity1;
+import com.syl.myapplication1.activity.ToolbarActivity2;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -85,7 +86,7 @@ public class PopFragment extends BaseFragment implements View.OnClickListener, P
                 startActivity(intent);
                 break;
             case R.id.btn_toolbar2:
-                intent = new Intent(getActivity(),ToolbarActivity1.class);
+                intent = new Intent(getActivity(),ToolbarActivity2.class);
                 startActivity(intent);
                 break;
             default:

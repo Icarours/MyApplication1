@@ -53,7 +53,7 @@ public class GreenDaoFragment extends BaseFragment implements View.OnClickListen
     }
 
     @Override
-    public View initView() {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = View.inflate(getActivity(), R.layout.fragment_green_dao, null);
         ButterKnife.bind(this, rootView);
         mTvContent.setMovementMethod(ScrollingMovementMethod.getInstance());
@@ -63,14 +63,6 @@ public class GreenDaoFragment extends BaseFragment implements View.OnClickListen
         mBtnUpdate.setOnClickListener(this);
         mBtnQuery.setOnClickListener(this);
         mBtnQueryAll.setOnClickListener(this);
-        return rootView;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
-        ButterKnife.bind(this, rootView);
         return rootView;
     }
 

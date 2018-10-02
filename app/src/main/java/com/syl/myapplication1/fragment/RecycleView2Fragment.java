@@ -21,7 +21,8 @@ import butterknife.ButterKnife;
 /**
  * Created by Bright on 2018/9/4.
  *
- * @Describe GridView网格, 一行有多个.RecyclerView上拉加载更多
+ * @Describe BaseQuickAdapter的应用
+ * GridView网格, 一行有多个.RecyclerView上拉加载更多
  * @Called
  */
 public class RecycleView2Fragment extends BaseFragment {

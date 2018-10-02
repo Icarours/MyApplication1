@@ -36,20 +36,14 @@ public class Fragment1 extends BaseFragment implements View.OnClickListener {
 
     }
 
+
     @Override
-    public View initView() {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = View.inflate(getActivity(), R.layout.fragment1, null);
         ButterKnife.bind(this, rootView);
         Intent intent = getActivity().getIntent();
         mTest1 = (Test1) intent.getSerializableExtra("test1");
         mButton.setOnClickListener(this);
-        return rootView;
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // TODO: inflate a fragment view
-        View rootView = super.onCreateView(inflater, container, savedInstanceState);
 
         return rootView;
     }

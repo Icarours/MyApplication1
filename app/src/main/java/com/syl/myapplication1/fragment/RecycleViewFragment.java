@@ -20,7 +20,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Bright on 2018/9/3.
  *
- * @Describe
+ * @Describe BaseQuickAdapter的应用
  * @Called
  */
 public class RecycleViewFragment extends BaseFragment {

@@ -37,6 +37,7 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     private static final int BTN_RECORDER = 14;//录音
     private static final int BTN_RECORDER2 = 15;//录音2
     private static final int BTN_POP = 16;//弹出式菜单
+    private static final int BTN_MP_ANDROID_CHART = 17;//强大的统计图,自定义控件
     @Bind(R.id.btn_lv_demo1)
     Button mBtnLvDemo1;
     @Bind(R.id.btn_glide)
@@ -69,6 +70,8 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     Button mBtnRecorder2;
     @Bind(R.id.btn_pop)
     Button mBtnPop;
+    @Bind(R.id.btn_mp_android_chart)
+    Button mBtnMpAndroidChart;
     private View mRootView;
 
     @Override
@@ -102,6 +105,7 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
         mBtnRecorder2.setOnClickListener(this);
         mBtnRecorder2.setVisibility(View.GONE);
         mBtnPop.setOnClickListener(this);
+        mBtnMpAndroidChart.setOnClickListener(this);
         return mRootView;
     }
 
@@ -168,6 +172,9 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
                 break;
             case R.id.btn_pop:
                 intent.putExtra("btn_code", BTN_POP);
+                break;
+            case R.id.btn_mp_android_chart:
+                intent.putExtra("btn_code", BTN_MP_ANDROID_CHART);
                 break;
             default:
                 break;

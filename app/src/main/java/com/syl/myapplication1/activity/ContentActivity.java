@@ -4,7 +4,12 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
 import android.widget.FrameLayout;
+import android.widget.Toast;
 
 import com.syl.myapplication1.R;
 import com.syl.myapplication1.fragment.ArcFragment;
@@ -12,6 +17,7 @@ import com.syl.myapplication1.fragment.FrescoFragment;
 import com.syl.myapplication1.fragment.GlideFragment;
 import com.syl.myapplication1.fragment.JpushFragment;
 import com.syl.myapplication1.fragment.LvDemoFragment;
+import com.syl.myapplication1.fragment.MPAndroidChartFragment;
 import com.syl.myapplication1.fragment.PicassoFragment;
 import com.syl.myapplication1.fragment.PopFragment;
 import com.syl.myapplication1.fragment.Recorder2Fragment;
@@ -37,6 +43,8 @@ public class ContentActivity extends AppCompatActivity {
 
     @Bind(R.id.fl_content)
     FrameLayout mFlContent;
+    @Bind(R.id.toolbar)
+    Toolbar mToolbar;
     private int mCurrentIndex;
     private static final int BTN_LV_DEMO1 = 1;//ListView
     private static final int BTN_GLIDE = 2;//Glide框架
@@ -54,14 +62,49 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_RECORDER = 14;//录音
     private static final int BTN_RECORDER2 = 15;//录音2
     private static final int BTN_POP = 16;//弹出式菜单
+    private static final int BTN_MP_ANDROID_CHART = 17;//强大的统计图,自定义控件
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
         mCurrentIndex = getIntent().getIntExtra("btn_code", 1);
         ButterKnife.bind(this);
+        initToolBar();
         initView();
+    }
+
+    private void initToolBar() {
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+        mToolbar.inflateMenu(R.menu.menu_normal);
+        mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.action_search:
+                        Toast.makeText(ContentActivity.this, "action_search", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_notification:
+                        Toast.makeText(ContentActivity.this, "action_notification", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_item_one:
+                        Toast.makeText(ContentActivity.this, "action_item_one", Toast.LENGTH_SHORT).show();
+                        break;
+                    case R.id.action_item_two:
+                        Toast.makeText(ContentActivity.this, "action_item_two", Toast.LENGTH_SHORT).show();
+                        break;
+                    default:
+                        break;
+                }
+                return false;
+            }
+        });
     }
 
     private void initView() {
@@ -115,6 +158,9 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_POP:
                 transaction.replace(R.id.fl_content, new PopFragment());
+                break;
+            case BTN_MP_ANDROID_CHART:
+                transaction.replace(R.id.fl_content, new MPAndroidChartFragment());
                 break;
             default:
                 break;

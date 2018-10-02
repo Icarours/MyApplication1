@@ -5,17 +5,17 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.syl.coolwater.activity.CheckPermissionsActivity;
 import com.syl.coolwater.factory.FragmentFactory;
-import com.syl.coolwater.view.BottomNavigationViewHelper;
 import com.syl.coolwater.fragment.ContentFragment1;
 import com.syl.coolwater.fragment.ContentFragment2;
 import com.syl.coolwater.fragment.ContentFragment3;
 import com.syl.coolwater.fragment.ContentFragment4;
+import com.syl.coolwater.view.BottomNavigationViewHelper;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends CheckPermissionsActivity {
 
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
