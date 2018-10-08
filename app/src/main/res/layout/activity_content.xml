@@ -13,8 +13,6 @@
         app:title="Title"
         app:titleTextColor="#ffffff"
         android:background="@color/colorPrimaryDark"
-        app:subtitle="SubTitle"
-        app:subtitleTextColor="#ffffff"
         app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
         app:logo="@drawable/ic_android_black_24dp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.syl.myapplication1.R;
 import com.syl.myapplication1.fragment.ArcFragment;
+import com.syl.myapplication1.fragment.DisplayMetricFragment;
+import com.syl.myapplication1.fragment.DrawableFragment;
 import com.syl.myapplication1.fragment.FrescoFragment;
 import com.syl.myapplication1.fragment.GlideFragment;
 import com.syl.myapplication1.fragment.JpushFragment;
@@ -63,6 +65,9 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_RECORDER2 = 15;//录音2
     private static final int BTN_POP = 16;//弹出式菜单
     private static final int BTN_MP_ANDROID_CHART = 17;//强大的统计图,自定义控件
+    private static final int BTN_DRAWABLE = 18;//Drawable,图形和绘图
+    private static final int BTN_GET_DISPLAY_METRIC = 19;//屏幕宽高
+    private String mTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,12 +75,14 @@ public class ContentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
         mCurrentIndex = getIntent().getIntExtra("btn_code", 1);
+        mTitle = getIntent().getStringExtra("title");
         ButterKnife.bind(this);
         initToolBar();
         initView();
     }
 
     private void initToolBar() {
+        mToolbar.setTitle(mTitle);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -161,6 +168,12 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_MP_ANDROID_CHART:
                 transaction.replace(R.id.fl_content, new MPAndroidChartFragment());
+                break;
+            case BTN_DRAWABLE:
+                transaction.replace(R.id.fl_content, new DrawableFragment());
+                break;
+            case BTN_GET_DISPLAY_METRIC:
+                transaction.replace(R.id.fl_content, new DisplayMetricFragment());
                 break;
             default:
                 break;

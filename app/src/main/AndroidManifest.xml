@@ -414,6 +414,8 @@
         </activity>
         <activity android:name=".activity.ChartActivity">
         </activity>
+        <activity android:name=".activity.DrawableActivity">
+        </activity>
     </application>
 
 </manifest>

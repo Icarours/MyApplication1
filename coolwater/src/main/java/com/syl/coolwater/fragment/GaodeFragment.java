@@ -23,7 +23,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Bright on 2018/10/2.
  *
- * @Describe 高德地图定位,直接copy的demo
+ * @Describe 高德地图定位, 直接copy的demo
  * @Called
  */
 public class GaodeFragment extends BaseFragment implements View.OnClickListener {
@@ -33,6 +33,7 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
     TextView mTvContent;
     private AMapLocationClient locationClient = null;
     private AMapLocationClientOption locationOption = null;
+
     @Override
     protected void init() {
 
@@ -56,14 +57,14 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
         initLocation();
         return rootView;
     }
+
     /**
      * 初始化定位
      *
-     * @since 2.8.0
      * @author hongming.wang
-     *
+     * @since 2.8.0
      */
-    private void initLocation(){
+    private void initLocation() {
         //初始化client
         locationClient = new AMapLocationClient(getActivity().getApplicationContext());
         locationOption = getDefaultOption();
@@ -71,18 +72,17 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
         locationClient.setLocationOption(locationOption);
         // 设置定位监听
         locationClient.setLocationListener(locationListener);
-        // 设置定位参数
-        locationClient.setLocationOption(locationOption);
         // 启动定位
         locationClient.startLocation();
     }
+
     /**
      * 默认的定位参数
-     * @since 2.8.0
-     * @author hongming.wang
      *
+     * @author hongming.wang
+     * @since 2.8.0
      */
-    private AMapLocationClientOption getDefaultOption(){
+    private AMapLocationClientOption getDefaultOption() {
         AMapLocationClientOption mOption = new AMapLocationClientOption();
         mOption.setLocationMode(AMapLocationClientOption.AMapLocationMode.Hight_Accuracy);//可选，设置定位模式，可选的模式有高精度、仅设备、仅网络。默认为高精度模式
         mOption.setGpsFirst(false);//可选，设置是否gps优先，只在高精度模式下有效。默认关闭
@@ -98,6 +98,7 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
         mOption.setGeoLanguage(AMapLocationClientOption.GeoLanguage.DEFAULT);//可选，设置逆地理信息的语言，默认值为默认语言（根据所在地区选择语言）
         return mOption;
     }
+
     /**
      * 定位监听
      */
@@ -108,7 +109,7 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
 
                 StringBuffer sb = new StringBuffer();
                 //errCode等于0代表定位成功，其他的为定位失败，具体的可以参照官网定位错误码说明
-                if(location.getErrorCode() == 0){
+                if (location.getErrorCode() == 0) {
                     sb.append("定位成功" + "\n");
                     sb.append("定位类型: " + location.getLocationType() + "\n");
                     sb.append("经    度    : " + location.getLongitude() + "\n");
@@ -138,7 +139,7 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
                     sb.append("错误描述:" + location.getLocationDetail() + "\n");
                 }
                 sb.append("***定位质量报告***").append("\n");
-                sb.append("* WIFI开关：").append(location.getLocationQualityReport().isWifiAble() ? "开启":"关闭").append("\n");
+                sb.append("* WIFI开关：").append(location.getLocationQualityReport().isWifiAble() ? "开启" : "关闭").append("\n");
                 sb.append("* GPS状态：").append(getGPSStatusString(location.getLocationQualityReport().getGPSStatus())).append("\n");
                 sb.append("* GPS星数：").append(location.getLocationQualityReport().getGPSSatellites()).append("\n");
                 sb.append("* 网络类型：" + location.getLocationQualityReport().getNetworkType()).append("\n");
@@ -155,14 +156,16 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
             }
         }
     };
+
     /**
      * 获取GPS状态的字符串
+     *
      * @param statusCode GPS状态码
      * @return
      */
-    private String getGPSStatusString(int statusCode){
+    private String getGPSStatusString(int statusCode) {
         String str = "";
-        switch (statusCode){
+        switch (statusCode) {
             case AMapLocationQualityReport.GPS_STATUS_OK:
                 str = "GPS状态正常";
                 break;
@@ -181,6 +184,7 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
         }
         return str;
     }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
@@ -199,6 +203,6 @@ public class GaodeFragment extends BaseFragment implements View.OnClickListener 
     }
 
     private void location() {
-
+        initLocation();
     }
 }

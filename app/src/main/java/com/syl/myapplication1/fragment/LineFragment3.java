@@ -2,7 +2,6 @@ package com.syl.myapplication1.fragment;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.text.method.ScrollingMovementMethod;
 import android.view.LayoutInflater;
@@ -21,6 +20,7 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.syl.myapplication1.R;
 import com.syl.myapplication1.view.MyMarkerView;
 
@@ -33,7 +33,7 @@ import butterknife.ButterKnife;
 /**
  * Created by Bright on 2018/10/2.
  *
- * @Describe 折线图(多),x轴,y轴,legend,markerView,description等多项设置
+ * @Describe 折线图(多), x轴, y轴, legend, markerView, description等多项设置
  * @Called
  */
 public class LineFragment3 extends BaseFragment {
@@ -153,46 +153,102 @@ public class LineFragment3 extends BaseFragment {
         mLineChart3.setMarker(myMarkerView);
 
         //设置数据
-        LineData lineData = initLineData();
-        mLineChart3.setData(lineData);
-        mLineChart3.animateX(1000);//添加动画
+        initLineData();
+
         return rootView;
     }
 
     /**
      * 设置多条折线,一个LineDataSet代表一个折线.关键在于向LineData中添加LineDataSet
-     * @return
      */
-    @NonNull
-    private LineData initLineData() {
+    private void initLineData() {
         List<Entry> list = new ArrayList<>();
         for (int i = 0; i < 12; i++) {
             list.add(new Entry(i, (float) (Math.random() * 40 + 10)));
         }
-        LineDataSet lineDataSet = new LineDataSet(list, "温度");
-        lineDataSet.setDrawCircleHole(true);//设置圆环是空心还是实心.true,空心;false,实心
-        lineDataSet.setValueTextSize(8f);//设置字体大小
-        lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);//设置折线为光滑的贝塞尔曲线,默认折线
 
         List<Entry> list2 = new ArrayList<>();
         for (int i = 0; i < 12; i++) {
             list2.add(new Entry(i, (float) (Math.random() * 40 + 40)));
         }
-        LineDataSet lineDataSet2 = new LineDataSet(list2, "温度2");
-        lineDataSet2.setDrawCircleHole(true);//设置圆环是空心还是实心.true,空心;false,实心
-        lineDataSet2.setValueTextSize(8f);//设置字体大小
-        lineDataSet2.setMode(LineDataSet.Mode.LINEAR);//设置折线为光滑的贝塞尔曲线,默认折线
 
         List<Entry> list3 = new ArrayList<>();
         for (int i = 0; i < 12; i++) {
             list3.add(new Entry(i, (float) (Math.random() * 40 + 80)));
         }
-        LineDataSet lineDataSet3 = new LineDataSet(list3, "温度3");
-        lineDataSet3.setDrawCircleHole(true);//设置圆环是空心还是实心.true,空心;false,实心
-        lineDataSet3.setValueTextSize(8f);//设置字体大小
-        lineDataSet3.setMode(LineDataSet.Mode.STEPPED);//设置折线为光滑的贝塞尔曲线,默认折线
 
-        return new LineData(lineDataSet,lineDataSet2,lineDataSet3);
+        LineDataSet lineDataSet;
+        LineDataSet lineDataSet2;
+        LineDataSet lineDataSet3;
+        if (mLineChart3.getData() != null && mLineChart3.getData().getDataSetCount() > 0) {
+            lineDataSet = (LineDataSet) mLineChart3.getLineData().getDataSetByIndex(0);
+            lineDataSet2 = (LineDataSet) mLineChart3.getLineData().getDataSetByIndex(1);
+            lineDataSet3 = (LineDataSet) mLineChart3.getLineData().getDataSetByIndex(2);
+
+            lineDataSet.setValues(list);
+            lineDataSet2.setValues(list2);
+            lineDataSet3.setValues(list3);
+
+            mLineChart3.getData().notifyDataChanged();
+            mLineChart3.notifyDataSetChanged();
+        } else {
+            lineDataSet = new LineDataSet(list, "温度");
+//            lineDataSet.setDrawCircleHole(true);//设置圆环是空心还是实心.true,空心;false,实心
+//            lineDataSet.setValueTextSize(8f);//设置字体大小
+//            lineDataSet.setMode(LineDataSet.Mode.CUBIC_BEZIER);//设置折线为光滑的贝塞尔曲线,默认折线
+//            lineDataSet.setColor(R.color.colorAccent);
+            lineDataSet.setAxisDependency(YAxis.AxisDependency.LEFT);
+            lineDataSet.setColor(ColorTemplate.getHoloBlue());
+            lineDataSet.setCircleColor(Color.GREEN);
+            lineDataSet.setLineWidth(1f);
+            lineDataSet.setCircleRadius(2f);
+            lineDataSet.setFillAlpha(65);
+            lineDataSet.setFillColor(ColorTemplate.getHoloBlue());
+            lineDataSet.setHighLightColor(Color.rgb(244, 117, 117));
+            lineDataSet.setDrawCircleHole(false);
+
+            lineDataSet2 = new LineDataSet(list2, "温度2");
+//            lineDataSet2.setDrawCircleHole(true);//设置圆环是空心还是实心.true,空心;false,实心
+//            lineDataSet2.setValueTextSize(8f);//设置字体大小
+//            lineDataSet2.setMode(LineDataSet.Mode.LINEAR);//设置折线为光滑的贝塞尔曲线,默认折线
+//            lineDataSet2.setColor(R.color.green);
+            lineDataSet2.setAxisDependency(YAxis.AxisDependency.RIGHT);
+            lineDataSet2.setColor(Color.RED);
+            lineDataSet2.setCircleColor(Color.GREEN);
+            lineDataSet2.setLineWidth(1f);
+            lineDataSet2.setCircleRadius(2f);
+            lineDataSet2.setFillAlpha(65);
+            lineDataSet2.setFillColor(Color.RED);
+            lineDataSet2.setDrawCircleHole(false);
+            lineDataSet2.setHighLightColor(Color.rgb(244, 117, 117));
+
+            lineDataSet3 = new LineDataSet(list3, "温度3");
+//            lineDataSet3.setDrawCircleHole(true);//设置圆环是空心还是实心.true,空心;false,实心
+//            lineDataSet3.setValueTextSize(8f);//设置字体大小
+//            lineDataSet3.setMode(LineDataSet.Mode.STEPPED);//设置折线为光滑的贝塞尔曲线,默认折线
+//            lineDataSet3.setColor(R.color.colorMy1);
+            lineDataSet3.setAxisDependency(YAxis.AxisDependency.RIGHT);
+            lineDataSet3.setColor(Color.YELLOW);
+            lineDataSet3.setCircleColor(Color.GREEN);
+            lineDataSet3.setLineWidth(1f);
+            lineDataSet3.setCircleRadius(2f);
+            lineDataSet3.setFillAlpha(65);
+            lineDataSet3.setFillColor(ColorTemplate.colorWithAlpha(Color.YELLOW, 200));
+            lineDataSet3.setDrawCircleHole(false);
+            lineDataSet3.setHighLightColor(Color.rgb(244, 117, 117));
+
+            // create a data object with the datasets
+//            LineData data = new LineData(set1, set2, set3);
+//            data.setValueTextColor(Color.WHITE);
+//            data.setValueTextSize(9f);
+
+
+            mLineChart3.animateX(1000);//添加动画
+            LineData lineData = new LineData(lineDataSet, lineDataSet2, lineDataSet3);
+            lineData.setValueTextColor(Color.WHITE);
+            lineData.setValueTextSize(9f);
+            mLineChart3.setData(lineData);
+        }
     }
 
     @Override

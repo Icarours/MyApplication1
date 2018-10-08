@@ -85,6 +85,11 @@ public class MPAndroidChartFragment extends BaseFragment {
         mListTitle.add("折线图(单)");
         mListTitle.add("折线图(单)2");
         mListTitle.add("折线图(多)3");
+        mListTitle.add("环形图");
+        mListTitle.add("环形图(带引线)");
+        mListTitle.add("环形图3");
+        mListTitle.add("柱形图");
+        mListTitle.add("柱形图(多条)");
     }
 
     @Override

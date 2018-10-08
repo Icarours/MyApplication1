@@ -14,9 +14,14 @@ import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.syl.myapplication1.R;
+import com.syl.myapplication1.fragment.Bar2Fragment;
+import com.syl.myapplication1.fragment.BarFragment;
 import com.syl.myapplication1.fragment.LineFragment;
 import com.syl.myapplication1.fragment.LineFragment2;
 import com.syl.myapplication1.fragment.LineFragment3;
+import com.syl.myapplication1.fragment.Pie2Fragment;
+import com.syl.myapplication1.fragment.Pie3Fragment;
+import com.syl.myapplication1.fragment.PieFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -54,7 +59,7 @@ public class ChartActivity extends AppCompatActivity {
     private void initFragment() {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction = fragmentManager.beginTransaction();
-        Fragment chartFragment = null;
+        Fragment chartFragment;
         switch (mChart_code) {
             case 0:
                 chartFragment = new LineFragment();
@@ -68,6 +73,30 @@ public class ChartActivity extends AppCompatActivity {
                 break;
             case 2:
                 chartFragment = new LineFragment3();
+                transaction.replace(R.id.fl_chart, chartFragment);
+                transaction.commit();
+                break;
+            case 3:
+                chartFragment = new PieFragment();
+                transaction.replace(R.id.fl_chart, chartFragment);
+                transaction.commit();
+                break;
+            case 4:
+                chartFragment = new Pie2Fragment();
+                transaction.replace(R.id.fl_chart, chartFragment);
+                transaction.commit();
+                break;
+            case 5:
+                chartFragment = new Pie3Fragment();
+                transaction.replace(R.id.fl_chart, chartFragment);
+                transaction.commit();
+            case 6:
+                chartFragment = new BarFragment();
+                transaction.replace(R.id.fl_chart, chartFragment);
+                transaction.commit();
+                break;
+            case 7:
+                chartFragment = new Bar2Fragment();
                 transaction.replace(R.id.fl_chart, chartFragment);
                 transaction.commit();
                 break;

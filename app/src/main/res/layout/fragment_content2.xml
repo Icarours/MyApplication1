@@ -124,6 +124,7 @@
     <Button
         android:id="@+id/btn_pop"
         android:layout_width="wrap_content"
+        android:textAllCaps="false"
         android:layout_height="wrap_content" android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp" android:layout_marginTop="8dp"
         android:text="弹出式菜单和Toolbar" app:layout_constraintStart_toEndOf="@+id/btn_recorder2"
@@ -136,4 +137,19 @@
         android:layout_marginTop="8dp"
         android:text="MPAndroid Chart" android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
+    <Button
+        android:id="@+id/btn_drawable"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="Drawable" app:layout_constraintStart_toEndOf="@+id/btn_mp_android_chart"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
+    <Button
+        android:id="@+id/btn_get_display_metric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="屏幕宽高" app:layout_constraintStart_toEndOf="@+id/btn_drawable"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
 </android.support.constraint.ConstraintLayout>

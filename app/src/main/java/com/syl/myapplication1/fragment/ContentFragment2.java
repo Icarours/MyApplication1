@@ -38,6 +38,8 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     private static final int BTN_RECORDER2 = 15;//录音2
     private static final int BTN_POP = 16;//弹出式菜单
     private static final int BTN_MP_ANDROID_CHART = 17;//强大的统计图,自定义控件
+    private static final int BTN_DRAWABLE = 18;//Drawable,图形和绘图
+    private static final int BTN_GET_DISPLAY_METRIC = 19;//屏幕宽高
     @Bind(R.id.btn_lv_demo1)
     Button mBtnLvDemo1;
     @Bind(R.id.btn_glide)
@@ -72,6 +74,10 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     Button mBtnPop;
     @Bind(R.id.btn_mp_android_chart)
     Button mBtnMpAndroidChart;
+    @Bind(R.id.btn_drawable)
+    Button mBtnDrawable;
+    @Bind(R.id.btn_get_display_metric)
+    Button mBtnGetDisplayMetric;
     private View mRootView;
 
     @Override
@@ -106,6 +112,8 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
         mBtnRecorder2.setVisibility(View.GONE);
         mBtnPop.setOnClickListener(this);
         mBtnMpAndroidChart.setOnClickListener(this);
+        mBtnDrawable.setOnClickListener(this);
+        mBtnGetDisplayMetric.setOnClickListener(this);
         return mRootView;
     }
 
@@ -123,58 +131,83 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
             case R.id.btn_lv_demo1:
                 //带过去一个变量,用来确定究竟应该加载那个Fragment
                 intent.putExtra("btn_code", BTN_LV_DEMO1);
+                intent.putExtra("title", "ListView");
                 break;
             case R.id.btn_glide:
                 //带过去一个变量,用来确定究竟应该加载那个Fragment
                 intent.putExtra("btn_code", BTN_GLIDE);
+                intent.putExtra("title", "Glide框架");
                 break;
             case R.id.btn_picasso:
                 //带过去一个变量,用来确定究竟应该加载那个Fragment
                 intent.putExtra("btn_code", BTN_PICASSO);
+                intent.putExtra("title", "picasso");
                 break;
             case R.id.btn_fresco:
                 //带过去一个变量,用来确定究竟应该加载那个Fragment
                 intent.putExtra("btn_code", BTN_FRESCO);
+                intent.putExtra("title", "fresco");
                 break;
             case R.id.btn_url_image_loader:
                 //带过去一个变量,用来确定究竟应该加载那个Fragment
                 intent.putExtra("btn_code", BTN_URL_IMAGE_LOADER);
+                intent.putExtra("title", "url_image_loader");
                 break;
             case R.id.btn_arc:
                 intent.putExtra("btn_code", BTN_ARC);
+                intent.putExtra("title", "自定义view,圆形统计图");
                 break;
             case R.id.btn_share:
                 intent.putExtra("btn_code", BTN_SHARE);
+                intent.putExtra("title", "mob sharedSDK 分享");
                 break;
             case R.id.btn_jpush:
                 intent.putExtra("btn_code", BTN_JPUSH);
+                intent.putExtra("title", "极光推送");
                 break;
             case R.id.btn_rv:
                 intent.putExtra("btn_code", BTN_RV);
+                intent.putExtra("title", "recycleView");
                 break;
             case R.id.btn_rv2:
                 intent.putExtra("btn_code", BTN_RV2);
+                intent.putExtra("title", "recycleView2");
                 break;
             case R.id.btn_rx_easy_http:
                 intent.putExtra("btn_code", BTN_RX_EASY_HTTP);
+                intent.putExtra("title", "RxEasyHttp");
                 break;
             case R.id.btn_rv3:
                 intent.putExtra("btn_code", BTN_RV3);
+                intent.putExtra("title", "recycleView3");
                 break;
             case R.id.btn_vp_tab_fm:
                 intent.putExtra("btn_code", BTN_VP_TAB_FM);
+                intent.putExtra("title", "ViewPager+tabLayout+Fragment");
                 break;
             case R.id.btn_recorder://功能没有完成,隐藏该按钮
                 intent.putExtra("btn_code", BTN_RECORDER);
+                intent.putExtra("title", "录音");
                 break;
             case R.id.btn_recorder2://功能没有完成,隐藏该按钮
                 intent.putExtra("btn_code", BTN_RECORDER2);
+                intent.putExtra("title", "录音2");
                 break;
             case R.id.btn_pop:
                 intent.putExtra("btn_code", BTN_POP);
+                intent.putExtra("title", "弹出式菜单");
                 break;
             case R.id.btn_mp_android_chart:
                 intent.putExtra("btn_code", BTN_MP_ANDROID_CHART);
+                intent.putExtra("title", "强大的统计图,自定义控件");
+                break;
+            case R.id.btn_drawable:
+                intent.putExtra("btn_code", BTN_DRAWABLE);
+                intent.putExtra("title", "Drawable,图形和绘图");
+                break;
+            case R.id.btn_get_display_metric:
+                intent.putExtra("btn_code", BTN_GET_DISPLAY_METRIC);
+                intent.putExtra("title", "屏幕宽高");
                 break;
             default:
                 break;
