@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<!--进度栏-->
+    <LinearLayout
+        android:background="@drawable/bg_video_duration_control"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_vertical"
+        android:layout_height="wrap_content">
+        <!--进度数值-->
+        <TextView
+            android:id="@+id/video_player_progress"
+            android:text="00:15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <!--进度seekbar-->
+        <SeekBar
+            android:progressDrawable="@drawable/video_player_seekbar_progress_drawable"
+            android:id="@+id/video_player_progress_sk"
+            android:thumb="@drawable/video_progress_thumb"
+            android:progress="0"
+            android:thumbOffset="0dp"
+            android:maxHeight="6dp"
+            android:minHeight="6dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="wrap_content" />
+        <!--总时长-->
+        <TextView
+            android:id="@+id/video_player_duration"
+            android:text="00:30"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!--视频操作按钮栏-->
+<LinearLayout
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/bg_video_bottom_control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <!--back按钮-->
+    <ImageView
+        android:id="@id/back"
+        android:src="@drawable/video_player_back_selector"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <!--上一曲-->
+    <ImageView
+        android:id="@+id/video_player_pre"
+        android:src="@drawable/video_player_pre_selector"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <!--播放状态-->
+    <ImageView
+        android:id="@+id/video_player_play_state"
+        android:src="@drawable/video_player_pause_selector"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <!--下一曲-->
+    <ImageView
+        android:id="@+id/video_player_next"
+        android:src="@drawable/video_player_next_selector"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <!--全屏切换-->
+    <ImageView
+        android:id="@+id/video_player_screen_state"
+        android:src="@drawable/video_player_defaultscreen_selector"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+</LinearLayout>
+</LinearLayout>
