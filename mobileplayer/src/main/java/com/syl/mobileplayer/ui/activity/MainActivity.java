@@ -40,7 +40,7 @@ public class MainActivity extends BaseActivity {
         //adapter
         MainViewPagerAdapter adapter = new MainViewPagerAdapter(getSupportFragmentManager(),fragments);
         main_viewpager.setAdapter(adapter);
-        main_viewpager.setOnPageChangeListener(new MainOnpageChangeListener());
+        main_viewpager.addOnPageChangeListener(new MainOnpageChangeListener());
     }
 
     @Override

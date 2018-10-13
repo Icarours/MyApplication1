@@ -2,6 +2,7 @@ package com.syl.myapplication1.config;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Process;
 
@@ -77,6 +78,11 @@ public class MyApplication extends Application {
         //初始化极光推送
         JPushInterface.setDebugMode(true);    // 设置开启日志,发布时请关闭日志
         JPushInterface.init(this);            // 初始化 JPush
+        String brand = Build.BRAND;
+        if ("HUAWEI".equals(brand)) {
+            //如果同时受到多条推送通知,华为手机会将推送通知分组,用户如果不展开分组,直接点击,将不会触发广播接收者中的任何分支语句.所以设置极光推送消息只保留最后一条
+            JPushInterface.setLatestNotificationNumber(this, 1);
+        }
 
         MobSDK.init(this);//初始化mob分享
 
@@ -149,16 +155,16 @@ public class MyApplication extends Application {
                 //.addConverterFactory(GsonConverterFactory.create(gson))//本框架没有采用Retrofit的Gson转化，所以不用配置
                 .addCommonHeaders(headers)//设置全局公共头
                 .addCommonParams(params)//设置全局公共参数
-                //.addNetworkInterceptor(new NoCacheInterceptor())//设置网络拦截器
-                //.setCallFactory()//局设置Retrofit对象Factory
-                //.setCookieStore()//设置cookie
-                //.setOkproxy()//设置全局代理
-                //.setOkconnectionPool()//设置请求连接池
-                //.setCallbackExecutor()//全局设置Retrofit callbackExecutor
-                //可以添加全局拦截器，不需要就不要加入，错误写法直接导致任何回调不执行
-                //.addInterceptor(new GzipRequestInterceptor())//开启post数据进行gzip后发送给服务器
+        //.addNetworkInterceptor(new NoCacheInterceptor())//设置网络拦截器
+        //.setCallFactory()//局设置Retrofit对象Factory
+        //.setCookieStore()//设置cookie
+        //.setOkproxy()//设置全局代理
+        //.setOkconnectionPool()//设置请求连接池
+        //.setCallbackExecutor()//全局设置Retrofit callbackExecutor
+        //可以添加全局拦截器，不需要就不要加入，错误写法直接导致任何回调不执行
+        //.addInterceptor(new GzipRequestInterceptor())//开启post数据进行gzip后发送给服务器
 //                .addInterceptor(new CustomSignInterceptor())
-                    ;//添加参数签名拦截器
+        ;//添加参数签名拦截器
     }
 
     private void initFresco(Context context) {

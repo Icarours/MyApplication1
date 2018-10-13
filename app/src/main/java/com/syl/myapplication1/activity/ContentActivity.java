@@ -20,6 +20,7 @@ import com.syl.myapplication1.fragment.GlideFragment;
 import com.syl.myapplication1.fragment.JpushFragment;
 import com.syl.myapplication1.fragment.LvDemoFragment;
 import com.syl.myapplication1.fragment.MPAndroidChartFragment;
+import com.syl.myapplication1.fragment.MobileFragment;
 import com.syl.myapplication1.fragment.PicassoFragment;
 import com.syl.myapplication1.fragment.PopFragment;
 import com.syl.myapplication1.fragment.Recorder2Fragment;
@@ -67,6 +68,7 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_MP_ANDROID_CHART = 17;//强大的统计图,自定义控件
     private static final int BTN_DRAWABLE = 18;//Drawable,图形和绘图
     private static final int BTN_GET_DISPLAY_METRIC = 19;//屏幕宽高
+    private static final int BTN_MOBILE = 20;//手机参数
     private String mTitle;
 
     @Override
@@ -174,6 +176,9 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_GET_DISPLAY_METRIC:
                 transaction.replace(R.id.fl_content, new DisplayMetricFragment());
+                break;
+            case BTN_MOBILE:
+                transaction.replace(R.id.fl_content, new MobileFragment());
                 break;
             default:
                 break;

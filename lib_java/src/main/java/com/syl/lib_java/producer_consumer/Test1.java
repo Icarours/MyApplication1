@@ -14,8 +14,8 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class Test1 {
     public static void main(String[] args) {
         v1();
-
     }
+
 
     private static void v1() {
         BlockingQueue<PCData> queue = new LinkedBlockingDeque<>(10);
@@ -33,7 +33,7 @@ public class Test1 {
             service.execute(c1);
             service.execute(c2);
             service.execute(c3);
-            Thread.sleep(10*1000);
+            Thread.sleep(10 * 1000);
             p1.stopAction();
             p2.stopAction();
             p3.stopAction();

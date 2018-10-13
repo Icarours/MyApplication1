@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools" package="com.syl.coolwater">
-    <!--高德地图定位-->
+    <!--高德地图定位1start-->
     <!-- Normal Permissions 不需要运行时注册 -->
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -41,6 +41,7 @@
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!--高德地图定位1end-->
 
     <application
         android:name=".config.MyApplication"
@@ -51,6 +52,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
+        <!--高德地图定位2start-->
         <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
@@ -58,6 +60,7 @@
         <!-- 定位需要的服务 -->
         <service android:name="com.amap.api.location.APSService">
         </service>
+        <!--高德地图定位2end-->
 
         <activity
             android:name=".MainActivity"

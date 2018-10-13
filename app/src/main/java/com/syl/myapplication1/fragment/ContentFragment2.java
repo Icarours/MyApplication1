@@ -40,6 +40,7 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     private static final int BTN_MP_ANDROID_CHART = 17;//强大的统计图,自定义控件
     private static final int BTN_DRAWABLE = 18;//Drawable,图形和绘图
     private static final int BTN_GET_DISPLAY_METRIC = 19;//屏幕宽高
+    private static final int BTN_MOBILE = 20;//手机参数
     @Bind(R.id.btn_lv_demo1)
     Button mBtnLvDemo1;
     @Bind(R.id.btn_glide)
@@ -78,6 +79,8 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
     Button mBtnDrawable;
     @Bind(R.id.btn_get_display_metric)
     Button mBtnGetDisplayMetric;
+    @Bind(R.id.btn_mobile)
+    Button mBtnMobile;
     private View mRootView;
 
     @Override
@@ -114,6 +117,7 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
         mBtnMpAndroidChart.setOnClickListener(this);
         mBtnDrawable.setOnClickListener(this);
         mBtnGetDisplayMetric.setOnClickListener(this);
+        mBtnMobile.setOnClickListener(this);
         return mRootView;
     }
 
@@ -208,6 +212,10 @@ public class ContentFragment2 extends BaseFragment implements View.OnClickListen
             case R.id.btn_get_display_metric:
                 intent.putExtra("btn_code", BTN_GET_DISPLAY_METRIC);
                 intent.putExtra("title", "屏幕宽高");
+                break;
+            case R.id.btn_mobile:
+                intent.putExtra("btn_code", BTN_MOBILE);
+                intent.putExtra("title", "手机参数");
                 break;
             default:
                 break;

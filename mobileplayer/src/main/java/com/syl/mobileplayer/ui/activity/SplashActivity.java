@@ -21,15 +21,17 @@ import pub.devrel.easypermissions.EasyPermissions;
 
 /**
  * Created by ThinkPad on 2016/4/11.
+ * 添加动态权限的代码有部分冗余,以后再修改
  */
 public class SplashActivity extends BaseActivity implements EasyPermissions.PermissionCallbacks {
     private static final String TAG = "SplashActivity";
     private static final int RC_STORAGE_PERM = 10;
-    private static final String[] LOCATION_AND_CONTACTS =
-            {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.READ_CONTACTS};
+    //该权限暂时不用
+    private static final String[] LOCATION_AND_CONTACTS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.READ_CONTACTS};
 
     private static final int RC_CAMERA_PERM = 123;
     private static final int RC_LOCATION_CONTACTS_PERM = 124;
+
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void initData() {
