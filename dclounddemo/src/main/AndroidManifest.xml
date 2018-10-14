@@ -38,7 +38,7 @@
     <!-- 极光推送1 end -->
 
 
-    <!-- 高德地图定位1 start -->
+    <!--高德地图定位1start-->
     <!-- Normal Permissions 不需要运行时注册 -->
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -46,13 +46,11 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission
-        android:name="android.permission.CHANGE_CONFIGURATION"
-        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+                     tools:ignore="ProtectedPermissions"/>
 
     <!-- 请求网络 -->
-    <!-- <uses-permission android:name="android.permission.INTERNET"/> -->
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- 不是SDK需要的权限，是示例中的后台唤醒定位需要的权限 -->
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
@@ -73,16 +71,15 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <!-- 更改设置 -->
-    <uses-permission
-        android:name="android.permission.WRITE_SETTINGS"
-        tools:ignore="ProtectedPermissions"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+                     tools:ignore="ProtectedPermissions"/>
 
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <!--高德地图定位1end-->
 
-    <!-- 高德地图定位1 end -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -260,6 +257,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <service android:name=".service.GaodeLocationService"/>
     </application>
 
 </manifest>

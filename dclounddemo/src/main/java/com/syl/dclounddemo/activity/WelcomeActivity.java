@@ -10,8 +10,6 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.util.Log;
 
-import com.amap.api.location.AMapLocationClient;
-import com.amap.api.location.AMapLocationClientOption;
 import com.syl.dclounddemo.MainActivity;
 import com.syl.dclounddemo.R;
 import com.syl.dclounddemo.service.GaodeLocationService;
@@ -33,9 +31,6 @@ import io.dcloud.common.adapter.util.Logger;
  */
 public class WelcomeActivity extends CheckPermissionsActivity {
     public static final String TAG = WelcomeActivity.class.getSimpleName();
-    private AMapLocationClient locationClient = null;
-    private AMapLocationClientOption locationOption = null;
-    private StringBuffer mSb = new StringBuffer();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

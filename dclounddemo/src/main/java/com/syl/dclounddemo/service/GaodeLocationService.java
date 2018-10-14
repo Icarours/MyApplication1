@@ -26,6 +26,7 @@ import java.io.IOException;
  * date     2018/10/13 1:07
  * desc
  * 高德地图定位服务
+ * 这个Service是从别的项目中考过来的,忘了在Manifest文件中注册,结果GaodeLocationService一直不能运行,卡了好久
  */
 
 public class GaodeLocationService extends Service {
