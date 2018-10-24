@@ -28,6 +28,7 @@ import com.syl.myapplication1.fragment.RecorderFragment;
 import com.syl.myapplication1.fragment.RecycleView2Fragment;
 import com.syl.myapplication1.fragment.RecycleView3Fragment;
 import com.syl.myapplication1.fragment.RecycleViewFragment;
+import com.syl.myapplication1.fragment.RvCheckBoxFragment;
 import com.syl.myapplication1.fragment.RxEasyHttpFragment;
 import com.syl.myapplication1.fragment.ShareFragment;
 import com.syl.myapplication1.fragment.UrlImageLoaderFragment;
@@ -69,6 +70,7 @@ public class ContentActivity extends AppCompatActivity {
     private static final int BTN_DRAWABLE = 18;//Drawable,图形和绘图
     private static final int BTN_GET_DISPLAY_METRIC = 19;//屏幕宽高
     private static final int BTN_MOBILE = 20;//手机参数
+    private static final int BTN_RV_CHECK_BOX = 21;//条目中有CheckBox的RecycleView
     private String mTitle;
 
     @Override
@@ -179,6 +181,9 @@ public class ContentActivity extends AppCompatActivity {
                 break;
             case BTN_MOBILE:
                 transaction.replace(R.id.fl_content, new MobileFragment());
+                break;
+            case BTN_RV_CHECK_BOX:
+                transaction.replace(R.id.fl_content, new RvCheckBoxFragment());
                 break;
             default:
                 break;

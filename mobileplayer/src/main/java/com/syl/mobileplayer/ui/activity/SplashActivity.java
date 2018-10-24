@@ -35,7 +35,7 @@ public class SplashActivity extends BaseActivity implements EasyPermissions.Perm
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void initData() {
-        storageTask();
+        storageTask();//请求存储卡动态权限
     }
 
     @Override

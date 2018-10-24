@@ -14,6 +14,8 @@ import com.syl.mobileplayer.adapter.VideoListAdapter;
 import com.syl.mobileplayer.bean.VideoItem;
 import com.syl.mobileplayer.ui.activity.VideoPlayerActivity;
 
+import java.util.ArrayList;
+
 
 /**
  * Created by ThinkPad on 2016/4/11.
@@ -60,10 +62,13 @@ public class VideoFragment extends BaseFragment {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 //获取当前条目
                 Cursor cursor = (Cursor) parent.getItemAtPosition(position);
-                VideoItem videoItem = VideoItem.getVideoItem(cursor);
+//                VideoItem videoItem = VideoItem.getVideoItem(cursor);
+                ArrayList<VideoItem> videoItems = VideoItem.getVideoItems(cursor);
                 //跳转
                 Intent intent =  new Intent(VideoFragment.this.getActivity(),VideoPlayerActivity.class);
-                intent.putExtra("videoItem",videoItem);
+                intent.putExtra("videoItems",videoItems);
+                intent.putExtra("position",position);
+//                intent.putExtra("videoItem",videoItem);
                 startActivity(intent);
             }
         });

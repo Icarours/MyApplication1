@@ -26,16 +26,13 @@ import butterknife.ButterKnife;
 /**
  * Created by Bright on 2018/9/6.
  *
- * @Describe
+ * @Describe 上滑加载更多
  * @Called
  */
 public class RecycleView3Fragment extends BaseFragment {
     @Bind(R.id.recycler)
     RecyclerView mRecyclerView;
-    //    @Bind(R.id.btn_change)
-//    ImageButton mBtnChange;
     private BaseQuickAdapter<String, BaseViewHolder> mAdapter;
-    boolean mIsLinearManager;
 
     @Override
     protected void init() {
@@ -58,7 +55,6 @@ public class RecycleView3Fragment extends BaseFragment {
             protected void convert(BaseViewHolder helper, String item) {
                 helper.setText(R.id.tv_name, item);
                 ImageView iv = helper.getView(R.id.imageView);
-//                iv.setImageResource(R.mipmap.img1);
                 Resources res = getActivity().getResources();
                 BitmapFactory.Options options = new BitmapFactory.Options();
                 options.inSampleSize = 16;
@@ -68,12 +64,12 @@ public class RecycleView3Fragment extends BaseFragment {
         };
 
         mRecyclerView.setAdapter(mAdapter);
-        mAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);
-        mAdapter.isFirstOnly(true);
+        mAdapter.openLoadAnimation(BaseQuickAdapter.SCALEIN);//开启缩放动画
+        mAdapter.isFirstOnly(true);//true,第一次加载数据时有动画;false,每次加载数据时都有动画
         mAdapter.setOnLoadMoreListener(new BaseQuickAdapter.RequestLoadMoreListener() {
             @Override
             public void onLoadMoreRequested() {
-                new Handler().postDelayed(new Runnable() {
+                new Handler().postDelayed(new Runnable() {//加载更多的时候延迟两秒,这样看起来更舒服
                     @Override
                     public void run() {
                         mAdapter.addData(addDatas());
@@ -121,20 +117,4 @@ public class RecycleView3Fragment extends BaseFragment {
         ButterKnife.bind(this, rootView);
         return rootView;
     }
-
-//    @Override
-//    public void onClick(View v) {
-//        //线性
-//        if (mIsLinearManager) {
-//            mAdapter.setLayoutType(BaseQuickAdapter.TRANS_0_VIEW);
-//            mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-//        } else {
-//            //网格
-//            mAdapter.setLayoutType(BaseQuickAdapter.TRANS_1_VIEW);
-//            mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
-//            //需要显示加载更多则加上下面这句   从新关联recycler
-//            mAdapter.onAttachedToRecyclerView(mRecyclerView);
-//        }
-//        mIsLinearManager = !mIsLinearManager;
-//    }
 }

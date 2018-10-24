@@ -124,10 +124,10 @@
     <Button
         android:id="@+id/btn_pop"
         android:layout_width="wrap_content"
-        android:textAllCaps="false"
-        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-        android:text="弹出式菜单和Toolbar" app:layout_constraintStart_toEndOf="@+id/btn_recorder2"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="弹出式菜单和Toolbar"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_recorder2"
         app:layout_constraintTop_toBottomOf="@+id/btn_vp_tab_fm"/>
     <Button
         android:id="@+id/btn_mp_android_chart"
@@ -136,14 +136,15 @@
         android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="MPAndroid Chart" android:textAllCaps="false"
-        app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
     <Button
         android:id="@+id/btn_drawable"
         android:layout_width="wrap_content"
-        android:textAllCaps="false"
-        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
-        android:text="Drawable" app:layout_constraintStart_toEndOf="@+id/btn_mp_android_chart"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="Drawable"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_mp_android_chart"
         app:layout_constraintTop_toBottomOf="@+id/btn_pop"/>
     <Button
         android:id="@+id/btn_get_display_metric"
@@ -158,5 +159,13 @@
         android:layout_height="wrap_content" android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp" android:layout_marginTop="8dp"
         android:text="手机参数" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_mp_android_chart"/>
+    <Button
+        android:id="@+id/btn_rv_check_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp" android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" android:text="Rv_CheckBox"
+        android:textAllCaps="false" app:layout_constraintStart_toEndOf="@+id/btn_mobile"
         app:layout_constraintTop_toBottomOf="@+id/btn_mp_android_chart"/>
 </android.support.constraint.ConstraintLayout>
