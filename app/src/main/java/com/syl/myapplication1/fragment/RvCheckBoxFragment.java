@@ -27,7 +27,8 @@ import io.vov.vitamio.utils.Log;
 /**
  * Created by Bright on 2018/10/24.
  *
- * @Describe RecycleView中带有CheckBox的RecycleView,无法根据CheckBox的状态改变对应的bean数据
+ * @Describe 条目中带有CheckBox的RecycleView,checkBox.setOnCheckedChangeListener监听设置之后,在回调方法中给
+ * item.setChecked(checkBox.isChecked());赋值,然后再给checkBox赋值,checkBox.setChecked(item.isChecked());
  * @Called
  */
 public class RvCheckBoxFragment extends BaseFragment {
@@ -102,7 +103,10 @@ public class RvCheckBoxFragment extends BaseFragment {
             helper.setText(R.id.tv_title, item.getTitle());
             helper.setText(R.id.tv_content, item.getContent());
             final CheckBox checkBox = helper.getView(R.id.cb);
-            checkBox.setChecked(item.isChecked());
+/**
+ * 带有CheckBox的RecycleView,checkBox.setOnCheckedChangeListener监听设置之后,在回调方法中给
+ * item.setChecked(checkBox.isChecked());赋值,然后再给checkBox赋值,checkBox.setChecked(item.isChecked());
+ */
             checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -110,6 +114,7 @@ public class RvCheckBoxFragment extends BaseFragment {
                     Log.d("isChecked=="+isChecked+item);
                 }
             });
+            checkBox.setChecked(item.isChecked());
         }
     }
 

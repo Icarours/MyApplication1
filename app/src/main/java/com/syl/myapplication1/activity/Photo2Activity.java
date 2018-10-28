@@ -6,14 +6,13 @@ import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
 import com.syl.myapplication1.R;
-
-import org.devio.takephoto.app.TakePhotoActivity;
 
 import java.io.File;
 
@@ -25,7 +24,7 @@ import butterknife.ButterKnife;
  * desc
  * 使用相机拍照,压缩照片
  */
-public class Photo2Activity extends TakePhotoActivity implements View.OnClickListener {
+public class Photo2Activity extends AppCompatActivity implements View.OnClickListener {
 
     private static final int REQUEST_CODE_TAKE_PICTURE = 100;
     @Bind(R.id.btn_take_photo)
@@ -58,10 +57,9 @@ public class Photo2Activity extends TakePhotoActivity implements View.OnClickLis
             options.inSampleSize = 8;
             Bitmap bitmap = BitmapFactory.decodeFile(FILE_PATH, options);
             mIv.setImageBitmap(bitmap);
-        } else if (requestCode == 1) {
-            Log.i(TAG, "默认content地址："+data.getData());
-            mIv.setImageURI(data.getData());
-
+        } else if (requestCode == 1) {//相机拍照返回的默认地址是null
+//            Log.i(TAG, "默认content地址："+data.getData());
+//            mIv.setImageURI(data.getData());
         }
     }
 

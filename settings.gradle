@@ -1,2 +1,2 @@
-include ':app', ':myapplication1aid', ':vitamio_lib', ':googleplay3', ':lib_java', ':JPushExample(1047076)', ':coolwater', ':mobileplayer', ':dclounddemo',":baiduplayer_lib",
-        ":library_recycler",":takephoto_library"
+include ':app', ':myapplication1aid', ':vitamio_lib', ':googleplay3', ':lib_java', ':JPushExample(1047076)', ':coolwater', ':mobileplayer', ':dclounddemo', ':qq_x5_test',":baiduplayer_lib",
+        ":library_recycler",":takephoto_library",":X5WebDemo",":Application_Camera",":Application_camera_raw"

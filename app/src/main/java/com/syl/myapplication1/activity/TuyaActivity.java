@@ -71,7 +71,7 @@ public class TuyaActivity extends AppCompatActivity implements View.OnClickListe
         mBtnSave.setOnClickListener(this);
         mBtnClear.setOnClickListener(this);
 
-        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG|Paint.FILTER_BITMAP_FLAG);
+        mPaint = new Paint(Paint.ANTI_ALIAS_FLAG | Paint.FILTER_BITMAP_FLAG);
         mPaint.setStrokeWidth(5f);
         mPaint.setColor(0x33ff0000);//设置默认颜色
         mIv.setOnTouchListener(this);
@@ -85,6 +85,7 @@ public class TuyaActivity extends AppCompatActivity implements View.OnClickListe
             public void onGlobalLayout() {
                 mBitmap = Bitmap.createBitmap(mIv.getWidth(), mIv.getHeight(), Bitmap.Config.ARGB_8888);
                 mCanvas = new Canvas(mBitmap);
+                mCanvas.drawARGB(255, 255, 255, 255);//先绘制一层白色,否则,保存得到图片的背景是黑色的
                 mIv.getViewTreeObserver().removeOnGlobalLayoutListener(this);//注销自己
             }
         });
@@ -106,7 +107,7 @@ public class TuyaActivity extends AppCompatActivity implements View.OnClickListe
                 saveImg();
                 break;
             case R.id.btn_clear:
-                mCanvas.drawColor(0, PorterDuff.Mode.CLEAR);//清空画布
+                mCanvas.drawColor(Color.WHITE, PorterDuff.Mode.CLEAR);//清空画布
                 break;
             default:
                 break;
