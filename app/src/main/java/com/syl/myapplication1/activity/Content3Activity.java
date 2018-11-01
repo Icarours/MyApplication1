@@ -15,6 +15,7 @@ import com.syl.myapplication1.R;
 import com.syl.myapplication1.domain.TitleBean;
 import com.syl.myapplication1.fragment.BaseFragment;
 import com.syl.myapplication1.fragment.CameraFragment;
+import com.syl.myapplication1.fragment.SearchViewFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -23,6 +24,7 @@ import butterknife.ButterKnife;
  * author   Bright
  * date     2018/10/27 19:40
  * desc 底部按钮,第三个按钮对应的内容
+ *ContentFragment3->Content3Activity
  */
 public class Content3Activity extends AppCompatActivity {
 
@@ -54,6 +56,10 @@ public class Content3Activity extends AppCompatActivity {
             default:
             case 0:
                 fragment = new CameraFragment();
+                transaction.replace(R.id.fl_content3, fragment);
+                break;
+            case 1:
+                fragment = new SearchViewFragment();
                 transaction.replace(R.id.fl_content3, fragment);
                 break;
         }

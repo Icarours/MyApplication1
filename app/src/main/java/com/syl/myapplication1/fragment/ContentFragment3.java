@@ -47,6 +47,7 @@ public class ContentFragment3 extends BaseFragment {
     protected void initData() {
         mList = new ArrayList<>();
         mList.add(new TitleBean(1,"相机,相册", "调用系统相机,相册"));
+        mList.add(new TitleBean(1,"SearchView", "SearchView搜索框"));
         for (int i = 100; i < 120; i++) {
             mList.add(new TitleBean(i,"title--" + i, "description--" + i));
         }
