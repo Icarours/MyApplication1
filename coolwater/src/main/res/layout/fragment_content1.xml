@@ -22,4 +22,28 @@
         android:text="交换数据" android:textAllCaps="false"
         app:layout_constraintStart_toEndOf="@+id/btn_green_dao"
         app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_myvolly"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="myvolly"
+        app:layout_constraintStart_toEndOf="@+id/btn_activity_fragment"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <Button
+        android:id="@+id/btn_rv1"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" android:layout_marginTop="8dp"
+        android:text="btn_rv1" app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_green_dao"/>
+    <Button
+        android:id="@+id/btn_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp" android:layout_marginTop="8dp"
+        android:text="日期时间控件" app:layout_constraintStart_toEndOf="@+id/btn_rv1"
+        app:layout_constraintTop_toBottomOf="@+id/btn_activity_fragment"/>
 </android.support.constraint.ConstraintLayout>

@@ -65,24 +65,24 @@ dependencies {
     compile 'cz.msebera.android:httpclient:4.4.1.2'
     //httpClient
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
     annotationProcessor 'com.jakewharton:butterknife:7.0.1'
     // https://mvnrepository.com/artifact/com.google.code.gson/gson
-    compile 'com.google.code.gson:gson:2.8.1'
+    implementation 'com.google.code.gson:gson:2.8.1'
     implementation project(':vitamio_lib')
     //轮播图框架
-    compile 'com.youth.banner:banner:1.4.9'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
+    implementation 'com.youth.banner:banner:1.4.9'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
     //universalimageloader图片加载
-    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     //fresco图片加载
-    compile 'com.facebook.fresco:fresco:0.9.0'
+    implementation 'com.facebook.fresco:fresco:0.9.0'
     //picasso图片加载
-    compile 'com.squareup.picasso:picasso:2.71828'
+    implementation 'com.squareup.picasso:picasso:2.71828'
     //一个印度开发者写的申请动态权限的框架,简单好用
-    compile 'com.master.android:permissionhelper:2.0'
-    compile 'de.greenrobot:greendao:2.1.0'
-    compile 'de.greenrobot:greendao-generator:2.1.0'
+    implementation 'com.master.android:permissionhelper:2.0'
+    implementation 'de.greenrobot:greendao:2.1.0'
+    implementation 'de.greenrobot:greendao-generator:2.1.0'
     //shared SDK 分享
     implementation files('libs/MobCommons-2018.0816.1650.jar')
     implementation files('libs/MobTools-2018.0817.1730.jar')

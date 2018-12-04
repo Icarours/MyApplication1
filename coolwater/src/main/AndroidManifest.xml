@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          xmlns:tools="http://schemas.android.com/tools" package="com.syl.coolwater">
-    <!--高德地图定位1start-->
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.syl.coolwater">
+
+    <!-- 高德地图定位1start -->
     <!-- Normal Permissions 不需要运行时注册 -->
     <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -9,8 +11,9 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
     <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
-                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission
+        android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions"/>
 
     <!-- 请求网络 -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -34,15 +37,16 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
     <!-- 更改设置 -->
-    <uses-permission android:name="android.permission.WRITE_SETTINGS"
-                     tools:ignore="ProtectedPermissions"/>
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions"/>
 
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
     <!-- 3.2.0版本增加 -->
     <uses-permission android:name="android.permission.BLUETOOTH"/>
-    <!--高德地图定位1end-->
 
+    <!-- 高德地图定位1end -->
     <application
         android:name=".config.MyApplication"
         android:allowBackup="true"
@@ -52,7 +56,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--高德地图定位2start-->
+        <!-- 高德地图定位2start -->
         <!-- 设置key -->
         <meta-data
             android:name="com.amap.api.v2.apikey"
@@ -60,7 +64,7 @@
         <!-- 定位需要的服务 -->
         <service android:name="com.amap.api.location.APSService">
         </service>
-        <!--高德地图定位2end-->
+        <!-- 高德地图定位2end -->
 
         <activity
             android:name=".MainActivity"
@@ -82,6 +86,10 @@
         <activity android:name=".config.BaseActivity">
         </activity>
         <activity android:name=".activity.ContentActivity2">
+        </activity>
+        <activity android:name=".activity.Rv1Activity">
+        </activity>
+        <activity android:name=".activity.DateActivity">
         </activity>
     </application>
 

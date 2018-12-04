@@ -68,11 +68,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    compile 'com.jakewharton:butterknife:7.0.1'
+    implementation 'com.jakewharton:butterknife:7.0.1'
     annotationProcessor 'com.jakewharton:butterknife:7.0.1'
-    compile 'org.greenrobot:greendao:3.0.1'
-    compile 'org.greenrobot:greendao-generator:3.0.0'
+    implementation 'org.greenrobot:greendao:3.0.1'
+    implementation 'org.greenrobot:greendao-generator:3.0.0'
     //最新代码还没更新到 jcenter 仓库，推荐使用方法二依赖项目
-    compile 'com.github.baserecycleradapter:library:1.1.0'
+    implementation 'com.github.baserecycleradapter:library:1.1.0'
     //    implementation project(':baiduplayer')
+    implementation 'com.alibaba:fastjson:1.1.70.android'
+    //RecyclerView框架
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    //网络请求框架
+    implementation 'com.zhouyou:rxeasyhttp:2.1.2'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }
